@@ -1,0 +1,2909 @@
+ \f
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                         
+ *******************************************************************************
+ *                                                                             *
+ *                                                                             *
+ *                               ************                                  *
+ *                               *          *                                  *
+ *                               * DOSRZnrc *                                  *
+ *                               *          *                                  *
+ *                               ************                                  *
+ *                                                                             *
+ *           Cylindrical-geometry dose-scoring EGSnrc user-code                *
+ *                                                                             *
+ *   DOSRZnrc was developed by the National Research Council of Canada         *
+ *                                                                             *
+ *     It uses the EGSnrc CodeSystem developed at NRC                          *
+ *     (based on the EGS4 Code System Carlo developed by SLAC and NRC)         *
+ *  running on win6432                                                         *
+ *                                                                             *
+ *                                                    Mon Jul  1 12:03:12 2019 *
+ *******************************************************************************
+
+================================================================================
+
+                   Electron/Photon transport parameter
+
+================================================================================
+
+ Photon cross sections                                      xcom
+ Compton cross sections                                     default
+ Photon transport cutoff(MeV)                                Set in regions
+ Pair angular sampling                                       KM 
+ Pair cross sections                                         BH 
+ Triplet production                                          Off
+ Bound Compton scattering                                    ON            
+ Radiative Compton corrections                               Off           
+ Rayleigh scattering                                         ON            
+ Atomic relaxations                                          EADL          
+ Photoelectron angular sampling                              ON            
+
+ Electron transport cutoff(MeV)                              Set in regions
+ Bremsstrahlung cross sections                              NIST
+ Bremsstrahlung angular sampling                             KM 
+ Spin effects                                                On
+ Electron Impact Ionization                                  ik
+ Maxium electron step in cm (SMAX)                           Set in regions
+ Maximum fractional energy loss/step (ESTEPE)                0.2500
+ Maximum 1st elastic moment/step (XIMAX)                     0.5000
+ Boundary crossing algorithm                                 EXACT     
+ Skin-depth for boundary crossing (MFP)                      3.000    
+ Electron-step algorithm                                     PRESTA-II 
+
+================================================================================
+
+                   MONTE CARLO, TRANSPORT, AND SCATTER CONTROLS
+
+ *******************************************************************************
+
+                   MAX # OF HISTORIES TO RUN           364000000
+                   MAX # OF HISTORIES TO ANALYZE       845000000
+                   INCIDENT CHARGE                             2
+                   MAXIMUM INCIDENT KINETIC ENERGY          6.000 (MeV)
+                   GLOBAL ELECTRON TRANSPORT CUT-OFF       0.512 (MeV)
+                   GLOBAL PHOTON TRANSPORT CUT-OFF         0.001 (MeV)
+                   MIN/MAX PHOTON STEP FORCED                   1/     1
+                   No cross section enhancement used
+                   RANGE REJECTION SWITCH                  OFF
+                   RAYLEIGH SCATTERING INCLUDED
+                   MAXIMUM CPUTIME ALLOWED                ***** (HRS)
+                   STATS IN PEAK REGION OBJECTIVE           0.00 %
+                   1ST INITIAL RANDOM NUMBER SEED                  1
+                   2ND INITIAL RANDOM NUMBER SEED                  3
+                   Bremsstrahlung splitting                OFF
+                   Charged particle Russian Roulette       OFF
+                   # ZONES ELEC ENERGY LOSS/STEP ALTERED   NONE
+                   # ZONES MAX ELEC STEP SIZE ALTERED      NONE
+                   NORMAL ELECTRON TRANSPORT WITH DISCRETE INTERACTIONS
+                    The following regions have atomic relaxations on: 
+                            1 --   359
+ *******************************************************************************
+
+                   MATERIAL SUMMARY   2 MATERIALS USED
+
+ *******************************************************************************
+
+ # MATERIAL  DENSITY(g/cm**3)      AE(MeV)    AP(MeV)         UE(MeV)    UP(MeV)
+ - --------  ----------------      -------    -------         -------    -------
+ 1   512wat     9.980E-01           0.512      0.001          50.511     50.000
+ 2   bone_c     1.850E+00           0.512      0.001          50.511     50.000
+
+ *******************************************************************************
+
+                             SOURCE PARAMETERS
+
+ *******************************************************************************
+
+                   Full phase space input for each incident particle. 
+     Source data file: C:\EGSnrc\egs_home\dosrznrc\Final_2x2.egsphsp1                                                                                                                                                                                                                  
+                         Source incident on front face, Z =        0.0000 cm.
+                         # of particles read from ph-sp file =    8.450E+08.
+               Total number of particles in file      :  50163570
+               Total number of photons                :  49998734
+               (the rest are electrons and positrons)
+
+               Maximum kinetic energyof the particles:     6.000 MeV
+               Minimum kinetic energy ofthe electrons:     0.000 MeV
+               # particles incident when phase space created :  645120000.
+
+
+ Particles will be recycled    7 times before moving on to next one.
+
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+         MASS = MASS OF EACH REGION IN GRAMS                                
+
+         0.0000                 0.0250                15.0000
+    0.0000---------------------------------------------
+          |IRL  2 IZ   1 IX   1 |IRL181 IZ   1 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    0.1500---------------------------------------------
+          |IRL  3 IZ   2 IX   1 |IRL182 IZ   2 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    0.3000---------------------------------------------
+          |IRL  4 IZ   3 IX   1 |IRL183 IZ   3 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    0.4500---------------------------------------------
+          |IRL  5 IZ   4 IX   1 |IRL184 IZ   4 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    0.6000---------------------------------------------
+          |IRL  6 IZ   5 IX   1 |IRL185 IZ   5 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    0.7500---------------------------------------------
+          |IRL  7 IZ   6 IX   1 |IRL186 IZ   6 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    0.9000---------------------------------------------
+          |IRL  8 IZ   7 IX   1 |IRL187 IZ   7 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    1.0500---------------------------------------------
+          |IRL  9 IZ   8 IX   1 |IRL188 IZ   8 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    1.2000---------------------------------------------
+          |IRL 10 IZ   9 IX   1 |IRL189 IZ   9 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    1.3500---------------------------------------------
+          |IRL 11 IZ  10 IX   1 |IRL190 IZ  10 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    1.5000---------------------------------------------
+          |IRL 12 IZ  11 IX   1 |IRL191 IZ  11 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    1.6500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+    1.6500---------------------------------------------
+          |IRL 13 IZ  12 IX   1 |IRL192 IZ  12 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    1.8000---------------------------------------------
+          |IRL 14 IZ  13 IX   1 |IRL193 IZ  13 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    1.9500---------------------------------------------
+          |IRL 15 IZ  14 IX   1 |IRL194 IZ  14 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    2.1000---------------------------------------------
+          |IRL 16 IZ  15 IX   1 |IRL195 IZ  15 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    2.2500---------------------------------------------
+          |IRL 17 IZ  16 IX   1 |IRL196 IZ  16 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    2.4000---------------------------------------------
+          |IRL 18 IZ  17 IX   1 |IRL197 IZ  17 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    2.5500---------------------------------------------
+          |IRL 19 IZ  18 IX   1 |IRL198 IZ  18 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    2.7000---------------------------------------------
+          |IRL 20 IZ  19 IX   1 |IRL199 IZ  19 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    2.8500---------------------------------------------
+          |IRL 21 IZ  20 IX   1 |IRL200 IZ  20 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   2.939E-04   |  MASS   1.058E+02   |
+    3.0000---------------------------------------------
+          |IRL 22 IZ  21 IX   1 |IRL201 IZ  21 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.0500---------------------------------------------
+          |IRL 23 IZ  22 IX   1 |IRL202 IZ  22 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.1000---------------------------------------------
+          |IRL 24 IZ  23 IX   1 |IRL203 IZ  23 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.1500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+    3.1500---------------------------------------------
+          |IRL 25 IZ  24 IX   1 |IRL204 IZ  24 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.2000---------------------------------------------
+          |IRL 26 IZ  25 IX   1 |IRL205 IZ  25 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.2500---------------------------------------------
+          |IRL 27 IZ  26 IX   1 |IRL206 IZ  26 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.3000---------------------------------------------
+          |IRL 28 IZ  27 IX   1 |IRL207 IZ  27 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.3500---------------------------------------------
+          |IRL 29 IZ  28 IX   1 |IRL208 IZ  28 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.4000---------------------------------------------
+          |IRL 30 IZ  29 IX   1 |IRL209 IZ  29 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.4500---------------------------------------------
+          |IRL 31 IZ  30 IX   1 |IRL210 IZ  30 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.5000---------------------------------------------
+          |IRL 32 IZ  31 IX   1 |IRL211 IZ  31 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.5500---------------------------------------------
+          |IRL 33 IZ  32 IX   1 |IRL212 IZ  32 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.6000---------------------------------------------
+          |IRL 34 IZ  33 IX   1 |IRL213 IZ  33 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.6500---------------------------------------------
+          |IRL 35 IZ  34 IX   1 |IRL214 IZ  34 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.7000---------------------------------------------
+          |IRL 36 IZ  35 IX   1 |IRL215 IZ  35 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.7500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+    3.7500---------------------------------------------
+          |IRL 37 IZ  36 IX   1 |IRL216 IZ  36 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.8000---------------------------------------------
+          |IRL 38 IZ  37 IX   1 |IRL217 IZ  37 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.8500---------------------------------------------
+          |IRL 39 IZ  38 IX   1 |IRL218 IZ  38 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.9000---------------------------------------------
+          |IRL 40 IZ  39 IX   1 |IRL219 IZ  39 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    3.9500---------------------------------------------
+          |IRL 41 IZ  40 IX   1 |IRL220 IZ  40 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+    4.0000---------------------------------------------
+          |IRL 42 IZ  41 IX   1 |IRL221 IZ  41 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    4.1500---------------------------------------------
+          |IRL 43 IZ  42 IX   1 |IRL222 IZ  42 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    4.3000---------------------------------------------
+          |IRL 44 IZ  43 IX   1 |IRL223 IZ  43 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    4.4500---------------------------------------------
+          |IRL 45 IZ  44 IX   1 |IRL224 IZ  44 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    4.6000---------------------------------------------
+          |IRL 46 IZ  45 IX   1 |IRL225 IZ  45 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    4.7500---------------------------------------------
+          |IRL 47 IZ  46 IX   1 |IRL226 IZ  46 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    4.9000---------------------------------------------
+          |IRL 48 IZ  47 IX   1 |IRL227 IZ  47 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    5.0500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+    5.0500---------------------------------------------
+          |IRL 49 IZ  48 IX   1 |IRL228 IZ  48 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    5.2000---------------------------------------------
+          |IRL 50 IZ  49 IX   1 |IRL229 IZ  49 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    5.3500---------------------------------------------
+          |IRL 51 IZ  50 IX   1 |IRL230 IZ  50 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    5.5000---------------------------------------------
+          |IRL 52 IZ  51 IX   1 |IRL231 IZ  51 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    5.6500---------------------------------------------
+          |IRL 53 IZ  52 IX   1 |IRL232 IZ  52 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    5.8000---------------------------------------------
+          |IRL 54 IZ  53 IX   1 |IRL233 IZ  53 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    5.9500---------------------------------------------
+          |IRL 55 IZ  54 IX   1 |IRL234 IZ  54 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    6.1000---------------------------------------------
+          |IRL 56 IZ  55 IX   1 |IRL235 IZ  55 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    6.2500---------------------------------------------
+          |IRL 57 IZ  56 IX   1 |IRL236 IZ  56 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    6.4000---------------------------------------------
+          |IRL 58 IZ  57 IX   1 |IRL237 IZ  57 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    6.5500---------------------------------------------
+          |IRL 59 IZ  58 IX   1 |IRL238 IZ  58 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    6.7000---------------------------------------------
+          |IRL 60 IZ  59 IX   1 |IRL239 IZ  59 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    6.8500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+    6.8500---------------------------------------------
+          |IRL 61 IZ  60 IX   1 |IRL240 IZ  60 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    7.0000---------------------------------------------
+          |IRL 62 IZ  61 IX   1 |IRL241 IZ  61 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    7.1500---------------------------------------------
+          |IRL 63 IZ  62 IX   1 |IRL242 IZ  62 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    7.3000---------------------------------------------
+          |IRL 64 IZ  63 IX   1 |IRL243 IZ  63 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    7.4500---------------------------------------------
+          |IRL 65 IZ  64 IX   1 |IRL244 IZ  64 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    7.6000---------------------------------------------
+          |IRL 66 IZ  65 IX   1 |IRL245 IZ  65 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    7.7500---------------------------------------------
+          |IRL 67 IZ  66 IX   1 |IRL246 IZ  66 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    7.9000---------------------------------------------
+          |IRL 68 IZ  67 IX   1 |IRL247 IZ  67 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    8.0500---------------------------------------------
+          |IRL 69 IZ  68 IX   1 |IRL248 IZ  68 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    8.2000---------------------------------------------
+          |IRL 70 IZ  69 IX   1 |IRL249 IZ  69 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    8.3500---------------------------------------------
+          |IRL 71 IZ  70 IX   1 |IRL250 IZ  70 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    8.5000---------------------------------------------
+          |IRL 72 IZ  71 IX   1 |IRL251 IZ  71 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    8.6500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+    8.6500---------------------------------------------
+          |IRL 73 IZ  72 IX   1 |IRL252 IZ  72 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    8.8000---------------------------------------------
+          |IRL 74 IZ  73 IX   1 |IRL253 IZ  73 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    8.9500---------------------------------------------
+          |IRL 75 IZ  74 IX   1 |IRL254 IZ  74 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    9.1000---------------------------------------------
+          |IRL 76 IZ  75 IX   1 |IRL255 IZ  75 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    9.2500---------------------------------------------
+          |IRL 77 IZ  76 IX   1 |IRL256 IZ  76 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    9.4000---------------------------------------------
+          |IRL 78 IZ  77 IX   1 |IRL257 IZ  77 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    9.5500---------------------------------------------
+          |IRL 79 IZ  78 IX   1 |IRL258 IZ  78 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    9.7000---------------------------------------------
+          |IRL 80 IZ  79 IX   1 |IRL259 IZ  79 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+    9.8500---------------------------------------------
+          |IRL 81 IZ  80 IX   1 |IRL260 IZ  80 IX   2 |
+          | /D/ / /bone_compac  | /D/ / /bone_compac  |
+          |  MASS   5.449E-04   |  MASS   1.962E+02   |
+   10.0000---------------------------------------------
+          |IRL 82 IZ  81 IX   1 |IRL261 IZ  81 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.0500---------------------------------------------
+          |IRL 83 IZ  82 IX   1 |IRL262 IZ  82 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.1000---------------------------------------------
+          |IRL 84 IZ  83 IX   1 |IRL263 IZ  83 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.1500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+   10.1500---------------------------------------------
+          |IRL 85 IZ  84 IX   1 |IRL264 IZ  84 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.2000---------------------------------------------
+          |IRL 86 IZ  85 IX   1 |IRL265 IZ  85 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.2500---------------------------------------------
+          |IRL 87 IZ  86 IX   1 |IRL266 IZ  86 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.3000---------------------------------------------
+          |IRL 88 IZ  87 IX   1 |IRL267 IZ  87 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.3500---------------------------------------------
+          |IRL 89 IZ  88 IX   1 |IRL268 IZ  88 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.4000---------------------------------------------
+          |IRL 90 IZ  89 IX   1 |IRL269 IZ  89 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.4500---------------------------------------------
+          |IRL 91 IZ  90 IX   1 |IRL270 IZ  90 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.5000---------------------------------------------
+          |IRL 92 IZ  91 IX   1 |IRL271 IZ  91 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.5500---------------------------------------------
+          |IRL 93 IZ  92 IX   1 |IRL272 IZ  92 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.6000---------------------------------------------
+          |IRL 94 IZ  93 IX   1 |IRL273 IZ  93 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.6500---------------------------------------------
+          |IRL 95 IZ  94 IX   1 |IRL274 IZ  94 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.7000---------------------------------------------
+          |IRL 96 IZ  95 IX   1 |IRL275 IZ  95 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.7500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+   10.7500---------------------------------------------
+          |IRL 97 IZ  96 IX   1 |IRL276 IZ  96 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.8000---------------------------------------------
+          |IRL 98 IZ  97 IX   1 |IRL277 IZ  97 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.8500---------------------------------------------
+          |IRL 99 IZ  98 IX   1 |IRL278 IZ  98 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.9000---------------------------------------------
+          |IRL100 IZ  99 IX   1 |IRL279 IZ  99 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   10.9500---------------------------------------------
+          |IRL101 IZ 100 IX   1 |IRL280 IZ 100 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-05   |  MASS   3.527E+01   |
+   11.0000---------------------------------------------
+          |IRL102 IZ 101 IX   1 |IRL281 IZ 101 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   11.2500---------------------------------------------
+          |IRL103 IZ 102 IX   1 |IRL282 IZ 102 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   11.5000---------------------------------------------
+          |IRL104 IZ 103 IX   1 |IRL283 IZ 103 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   11.7500---------------------------------------------
+          |IRL105 IZ 104 IX   1 |IRL284 IZ 104 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   12.0000---------------------------------------------
+          |IRL106 IZ 105 IX   1 |IRL285 IZ 105 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   12.2500---------------------------------------------
+          |IRL107 IZ 106 IX   1 |IRL286 IZ 106 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   12.5000---------------------------------------------
+          |IRL108 IZ 107 IX   1 |IRL287 IZ 107 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   12.7500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+   12.7500---------------------------------------------
+          |IRL109 IZ 108 IX   1 |IRL288 IZ 108 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   13.0000---------------------------------------------
+          |IRL110 IZ 109 IX   1 |IRL289 IZ 109 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   13.2500---------------------------------------------
+          |IRL111 IZ 110 IX   1 |IRL290 IZ 110 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   13.5000---------------------------------------------
+          |IRL112 IZ 111 IX   1 |IRL291 IZ 111 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   13.7500---------------------------------------------
+          |IRL113 IZ 112 IX   1 |IRL292 IZ 112 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   14.0000---------------------------------------------
+          |IRL114 IZ 113 IX   1 |IRL293 IZ 113 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   14.2500---------------------------------------------
+          |IRL115 IZ 114 IX   1 |IRL294 IZ 114 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   14.5000---------------------------------------------
+          |IRL116 IZ 115 IX   1 |IRL295 IZ 115 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   14.7500---------------------------------------------
+          |IRL117 IZ 116 IX   1 |IRL296 IZ 116 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   15.0000---------------------------------------------
+          |IRL118 IZ 117 IX   1 |IRL297 IZ 117 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   15.2500---------------------------------------------
+          |IRL119 IZ 118 IX   1 |IRL298 IZ 118 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   15.5000---------------------------------------------
+          |IRL120 IZ 119 IX   1 |IRL299 IZ 119 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   15.7500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+   15.7500---------------------------------------------
+          |IRL121 IZ 120 IX   1 |IRL300 IZ 120 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   16.0000---------------------------------------------
+          |IRL122 IZ 121 IX   1 |IRL301 IZ 121 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   16.2500---------------------------------------------
+          |IRL123 IZ 122 IX   1 |IRL302 IZ 122 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   16.5000---------------------------------------------
+          |IRL124 IZ 123 IX   1 |IRL303 IZ 123 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   16.7500---------------------------------------------
+          |IRL125 IZ 124 IX   1 |IRL304 IZ 124 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   17.0000---------------------------------------------
+          |IRL126 IZ 125 IX   1 |IRL305 IZ 125 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   17.2500---------------------------------------------
+          |IRL127 IZ 126 IX   1 |IRL306 IZ 126 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   17.5000---------------------------------------------
+          |IRL128 IZ 127 IX   1 |IRL307 IZ 127 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   17.7500---------------------------------------------
+          |IRL129 IZ 128 IX   1 |IRL308 IZ 128 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   18.0000---------------------------------------------
+          |IRL130 IZ 129 IX   1 |IRL309 IZ 129 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   18.2500---------------------------------------------
+          |IRL131 IZ 130 IX   1 |IRL310 IZ 130 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   18.5000---------------------------------------------
+          |IRL132 IZ 131 IX   1 |IRL311 IZ 131 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   18.7500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+   18.7500---------------------------------------------
+          |IRL133 IZ 132 IX   1 |IRL312 IZ 132 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   19.0000---------------------------------------------
+          |IRL134 IZ 133 IX   1 |IRL313 IZ 133 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   19.2500---------------------------------------------
+          |IRL135 IZ 134 IX   1 |IRL314 IZ 134 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   19.5000---------------------------------------------
+          |IRL136 IZ 135 IX   1 |IRL315 IZ 135 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   19.7500---------------------------------------------
+          |IRL137 IZ 136 IX   1 |IRL316 IZ 136 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   20.0000---------------------------------------------
+          |IRL138 IZ 137 IX   1 |IRL317 IZ 137 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   20.2500---------------------------------------------
+          |IRL139 IZ 138 IX   1 |IRL318 IZ 138 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   20.5000---------------------------------------------
+          |IRL140 IZ 139 IX   1 |IRL319 IZ 139 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   20.7500---------------------------------------------
+          |IRL141 IZ 140 IX   1 |IRL320 IZ 140 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   21.0000---------------------------------------------
+          |IRL142 IZ 141 IX   1 |IRL321 IZ 141 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   21.2500---------------------------------------------
+          |IRL143 IZ 142 IX   1 |IRL322 IZ 142 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   21.5000---------------------------------------------
+          |IRL144 IZ 143 IX   1 |IRL323 IZ 143 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   21.7500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+   21.7500---------------------------------------------
+          |IRL145 IZ 144 IX   1 |IRL324 IZ 144 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   22.0000---------------------------------------------
+          |IRL146 IZ 145 IX   1 |IRL325 IZ 145 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   22.2500---------------------------------------------
+          |IRL147 IZ 146 IX   1 |IRL326 IZ 146 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   22.5000---------------------------------------------
+          |IRL148 IZ 147 IX   1 |IRL327 IZ 147 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   22.7500---------------------------------------------
+          |IRL149 IZ 148 IX   1 |IRL328 IZ 148 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   23.0000---------------------------------------------
+          |IRL150 IZ 149 IX   1 |IRL329 IZ 149 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   23.2500---------------------------------------------
+          |IRL151 IZ 150 IX   1 |IRL330 IZ 150 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   23.5000---------------------------------------------
+          |IRL152 IZ 151 IX   1 |IRL331 IZ 151 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   23.7500---------------------------------------------
+          |IRL153 IZ 152 IX   1 |IRL332 IZ 152 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   24.0000---------------------------------------------
+          |IRL154 IZ 153 IX   1 |IRL333 IZ 153 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   24.2500---------------------------------------------
+          |IRL155 IZ 154 IX   1 |IRL334 IZ 154 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   24.5000---------------------------------------------
+          |IRL156 IZ 155 IX   1 |IRL335 IZ 155 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   24.7500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+   24.7500---------------------------------------------
+          |IRL157 IZ 156 IX   1 |IRL336 IZ 156 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   25.0000---------------------------------------------
+          |IRL158 IZ 157 IX   1 |IRL337 IZ 157 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   25.2500---------------------------------------------
+          |IRL159 IZ 158 IX   1 |IRL338 IZ 158 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   25.5000---------------------------------------------
+          |IRL160 IZ 159 IX   1 |IRL339 IZ 159 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   25.7500---------------------------------------------
+          |IRL161 IZ 160 IX   1 |IRL340 IZ 160 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   26.0000---------------------------------------------
+          |IRL162 IZ 161 IX   1 |IRL341 IZ 161 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   26.2500---------------------------------------------
+          |IRL163 IZ 162 IX   1 |IRL342 IZ 162 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   26.5000---------------------------------------------
+          |IRL164 IZ 163 IX   1 |IRL343 IZ 163 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   26.7500---------------------------------------------
+          |IRL165 IZ 164 IX   1 |IRL344 IZ 164 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   27.0000---------------------------------------------
+          |IRL166 IZ 165 IX   1 |IRL345 IZ 165 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   27.2500---------------------------------------------
+          |IRL167 IZ 166 IX   1 |IRL346 IZ 166 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   27.5000---------------------------------------------
+          |IRL168 IZ 167 IX   1 |IRL347 IZ 167 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   27.7500---------------------------------------------
+ \f
+
+                                                      Mon Jul  1 12:03:12 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL MATERIAL GRID: NON-ROTATED
+                    ******************************
+
+   /X/Y/Z/MED :  X = " "IS DEFAULT: OPTION NOT USED
+                   = "D" IF DOSE SCORING REGION
+                   = "C" IF CAVITY REGION
+                   = "S" IF SPR SCORING REGION
+                 Y = "T" IF TRACKING REGION
+                 Z = "A" IF TOTALLY ABSORBING REGION
+               MED = MEDIUM NAME, 11 CHARACTER ABREVIATION
+  
+
+         0.0000                 0.0250                15.0000
+   27.7500---------------------------------------------
+          |IRL169 IZ 168 IX   1 |IRL348 IZ 168 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   28.0000---------------------------------------------
+          |IRL170 IZ 169 IX   1 |IRL349 IZ 169 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   28.2500---------------------------------------------
+          |IRL171 IZ 170 IX   1 |IRL350 IZ 170 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   28.5000---------------------------------------------
+          |IRL172 IZ 171 IX   1 |IRL351 IZ 171 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   28.7500---------------------------------------------
+          |IRL173 IZ 172 IX   1 |IRL352 IZ 172 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   29.0000---------------------------------------------
+          |IRL174 IZ 173 IX   1 |IRL353 IZ 173 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   29.2500---------------------------------------------
+          |IRL175 IZ 174 IX   1 |IRL354 IZ 174 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   29.5000---------------------------------------------
+          |IRL176 IZ 175 IX   1 |IRL355 IZ 175 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   29.7500---------------------------------------------
+          |IRL177 IZ 176 IX   1 |IRL356 IZ 176 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   4.899E-04   |  MASS   1.764E+02   |
+   30.0000---------------------------------------------
+          |IRL178 IZ 177 IX   1 |IRL357 IZ 177 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-04   |  MASS   3.527E+02   |
+   30.5000---------------------------------------------
+          |IRL179 IZ 178 IX   1 |IRL358 IZ 178 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   9.798E-04   |  MASS   3.527E+02   |
+   31.0000---------------------------------------------
+          |IRL180 IZ 179 IX   1 |IRL359 IZ 179 IX   2 |
+          | /D/ / /512water_ic  | /D/ / /512water_ic  |
+          |  MASS   1.764E-02   |  MASS   6.349E+03   |
+   40.0000---------------------------------------------
+ \f
+  
+Mon Jul  1 12:03:12 2019
+
+ *******************************************************************************
+
+                   EXECUTION INFORMATION AND WARNING MESSAGES
+
+ *******************************************************************************
+
+ USING DOSRZnrc(EGSnrc)   
+
+ ********* RESTARTED INPUT FILE ********* 
+              364000000 NEW +    481000000 OLD HISTORIES
+                     NEW RN SEEDS=                     New RNG state:  ixx jxx =   90  26
+ ***WARNING*** Used all particles from source file.
+               Restarting from first particle.
+
+ *********DESIRED STATISTICAL ACCURACY OF  0.000% NOT REACHED*********
+ STATS IN PEAK DOSE REGION=  0.761 % AFTER 10 BATCHES
+
+********* FINAL RANDOM NUMBER STATE: ixx jxx =    2  35  *********
+
+ Finished simulations: cputime=416848.3(=***** h)
+
+ cputime per history =   0.00049 sec. number of historiesper  hour =    7297619.
+\f
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                         
+ Wed Jul  3 14:12:49 2019
+
+
+                             SUMMARY OF DOSE REGION RESULTS
+                             ******************************
+
+                         Total # charged particle steps   5.969E+11 +/- 0.017%
+            # of charged particle steps/initial history   5.488E+01 +/- 0.017%
+ # of presta-II steps/total # of charged particle steps       0.673 +/- 0.017%
+
+                  # charged particle steps in dose reg.   5.969E+11 +/- 0.017%
+                # of steps in dose reg./initial history   5.488E+01 +/- 0.017%
+           # of presta-II steps/# of steps in dose reg.       0.673 +/- 0.017%
+
+                   Z# : Geometrical zone number
+                   P# : Planar zone number
+                   C# : Cylndrical zone number
+                   T  : Total dose (Gray/(source particle))
+                   T-S: Total dose minus stoppers
+
+  Z# P# C#          T                  T-S
+ --- -- --------------------- -------------------
+   2  1  1  3.6228E-17 +/- 1.573%  3.3697E-17 +/- 1.574% 
+   3  2  1  6.8416E-17 +/- 1.024%  6.3732E-17 +/- 1.023% 
+   4  3  1  8.5330E-17 +/- 0.896%  7.9539E-17 +/- 0.895% 
+   5  4  1  9.6152E-17 +/- 0.840%  8.9667E-17 +/- 0.839% 
+   6  5  1  1.0351E-16 +/- 0.805%  9.6557E-17 +/- 0.804% 
+   7  6  1  1.0858E-16 +/- 0.787%  1.0126E-16 +/- 0.786% 
+   8  7  1  1.1013E-16 +/- 0.779%  1.0270E-16 +/- 0.778% 
+   9  8  1  1.1050E-16 +/- 0.769%  1.0308E-16 +/- 0.768% 
+  10  9  1  1.1470E-16 +/- 0.761%  1.0697E-16 +/- 0.760% 
+  11 10  1  1.1374E-16 +/- 0.762%  1.0609E-16 +/- 0.761% 
+  12 11  1  1.1460E-16 +/- 0.758%  1.0689E-16 +/- 0.756% 
+  13 12  1  1.1383E-16 +/- 0.759%  1.0617E-16 +/- 0.758% 
+  14 13  1  1.1422E-16 +/- 0.760%  1.0655E-16 +/- 0.759% 
+  15 14  1  1.1147E-16 +/- 0.766%  1.0400E-16 +/- 0.765% 
+  16 15  1  1.1245E-16 +/- 0.765%  1.0490E-16 +/- 0.764% 
+  17 16  1  1.0874E-16 +/- 0.771%  1.0142E-16 +/- 0.770% 
+  18 17  1  1.0951E-16 +/- 0.775%  1.0216E-16 +/- 0.773% 
+  19 18  1  1.0699E-16 +/- 0.779%  9.9786E-17 +/- 0.778% 
+  20 19  1  1.0599E-16 +/- 0.783%  9.8861E-17 +/- 0.782% 
+  21 20  1  1.0642E-16 +/- 0.785%  9.9262E-17 +/- 0.783% 
+  22 21  1  1.0561E-16 +/- 1.175%  9.8475E-17 +/- 1.172% 
+  23 22  1  1.0331E-16 +/- 1.182%  9.6407E-17 +/- 1.178% 
+  24 23  1  1.0515E-16 +/- 1.177%  9.8083E-17 +/- 1.174% 
+  25 24  1  1.0231E-16 +/- 1.185%  9.5416E-17 +/- 1.182% 
+  26 25  1  1.0306E-16 +/- 1.185%  9.6139E-17 +/- 1.181% 
+  27 26  1  1.0427E-16 +/- 1.176%  9.7229E-17 +/- 1.173% 
+  28 27  1  1.0171E-16 +/- 1.190%  9.4928E-17 +/- 1.187% 
+  29 28  1  1.0252E-16 +/- 1.183%  9.5628E-17 +/- 1.180% 
+  30 29  1  9.9251E-17 +/- 1.197%  9.2566E-17 +/- 1.193% 
+  31 30  1  1.0037E-16 +/- 1.196%  9.3635E-17 +/- 1.193% 
+  32 31  1  9.9765E-17 +/- 1.192%  9.3066E-17 +/- 1.189% 
+  33 32  1  1.0097E-16 +/- 1.196%  9.4184E-17 +/- 1.193% 
+  34 33  1  1.0130E-16 +/- 1.186%  9.4487E-17 +/- 1.183% 
+  35 34  1  1.0144E-16 +/- 1.201%  9.4637E-17 +/- 1.198% 
+  36 35  1  9.8816E-17 +/- 1.213%  9.2201E-17 +/- 1.210% 
+  37 36  1  1.0139E-16 +/- 1.193%  9.4538E-17 +/- 1.190% 
+  38 37  1  1.0086E-16 +/- 1.198%  9.4100E-17 +/- 1.195% 
+  39 38  1  1.0241E-16 +/- 1.190%  9.5533E-17 +/- 1.187% 
+  40 39  1  1.0118E-16 +/- 1.190%  9.4330E-17 +/- 1.188% 
+  41 40  1  1.0474E-16 +/- 1.184%  9.7639E-17 +/- 1.181% 
+  42 41  1  9.6799E-17 +/- 0.759%  8.9889E-17 +/- 0.759% 
+  43 42  1  9.5628E-17 +/- 0.769%  8.8801E-17 +/- 0.769% 
+  44 43  1  9.3382E-17 +/- 0.774%  8.6718E-17 +/- 0.774% 
+  45 44  1  9.2212E-17 +/- 0.777%  8.5618E-17 +/- 0.776% 
+  46 45  1  9.1297E-17 +/- 0.784%  8.4792E-17 +/- 0.784% 
+  47 46  1  8.9374E-17 +/- 0.787%  8.3005E-17 +/- 0.787% 
+  48 47  1  8.8162E-17 +/- 0.789%  8.1888E-17 +/- 0.788% 
+  49 48  1  8.7422E-17 +/- 0.796%  8.1183E-17 +/- 0.795% 
+  50 49  1  8.6365E-17 +/- 0.804%  8.0214E-17 +/- 0.803% 
+  51 50  1  8.4781E-17 +/- 0.805%  7.8726E-17 +/- 0.805% 
+  52 51  1  8.3562E-17 +/- 0.814%  7.7610E-17 +/- 0.813% 
+  53 52  1  8.2541E-17 +/- 0.818%  7.6667E-17 +/- 0.818% 
+  54 53  1  8.2419E-17 +/- 0.819%  7.6547E-17 +/- 0.819% 
+  55 54  1  8.0521E-17 +/- 0.829%  7.4775E-17 +/- 0.829% 
+  56 55  1  7.9245E-17 +/- 0.839%  7.3601E-17 +/- 0.838% 
+  57 56  1  7.7863E-17 +/- 0.845%  7.2305E-17 +/- 0.844% 
+  58 57  1  7.7379E-17 +/- 0.850%  7.1866E-17 +/- 0.849% 
+  59 58  1  7.6081E-17 +/- 0.850%  7.0647E-17 +/- 0.850% 
+  60 59  1  7.5560E-17 +/- 0.854%  7.0186E-17 +/- 0.854% 
+  61 60  1  7.3307E-17 +/- 0.867%  6.8081E-17 +/- 0.866% 
+  62 61  1  7.1873E-17 +/- 0.872%  6.6754E-17 +/- 0.872% 
+  63 62  1  7.1718E-17 +/- 0.874%  6.6614E-17 +/- 0.873% 
+  64 63  1  7.1965E-17 +/- 0.876%  6.6845E-17 +/- 0.875% 
+  65 64  1  6.9533E-17 +/- 0.888%  6.4591E-17 +/- 0.888% 
+  66 65  1  6.8173E-17 +/- 0.896%  6.3329E-17 +/- 0.896% 
+  67 66  1  6.8708E-17 +/- 0.898%  6.3825E-17 +/- 0.898% 
+  68 67  1  6.6253E-17 +/- 0.911%  6.1538E-17 +/- 0.910% 
+  69 68  1  6.4649E-17 +/- 0.923%  6.0056E-17 +/- 0.922% 
+  70 69  1  6.4219E-17 +/- 0.925%  5.9649E-17 +/- 0.924% 
+  71 70  1  6.4132E-17 +/- 0.922%  5.9555E-17 +/- 0.921% 
+  72 71  1  6.2323E-17 +/- 0.944%  5.7910E-17 +/- 0.944% 
+  73 72  1  6.0625E-17 +/- 0.952%  5.6320E-17 +/- 0.952% 
+  74 73  1  5.9810E-17 +/- 0.954%  5.5561E-17 +/- 0.953% 
+  75 74  1  5.9842E-17 +/- 0.951%  5.5591E-17 +/- 0.950% 
+  76 75  1  5.8646E-17 +/- 0.970%  5.4491E-17 +/- 0.970% 
+  77 76  1  5.8933E-17 +/- 0.972%  5.4752E-17 +/- 0.971% 
+  78 77  1  5.8553E-17 +/- 0.971%  5.4380E-17 +/- 0.971% 
+  79 78  1  5.6687E-17 +/- 0.987%  5.2669E-17 +/- 0.986% 
+  80 79  1  5.5341E-17 +/- 0.994%  5.1418E-17 +/- 0.994% 
+  81 80  1  5.3947E-17 +/- 1.006%  5.0127E-17 +/- 1.005% 
+  82 81  1  5.5074E-17 +/- 1.579%  5.1428E-17 +/- 1.575% 
+  83 82  1  5.3912E-17 +/- 1.606%  5.0308E-17 +/- 1.602% 
+  84 83  1  5.4570E-17 +/- 1.597%  5.0908E-17 +/- 1.592% 
+  85 84  1  5.3749E-17 +/- 1.604%  5.0165E-17 +/- 1.599% 
+  86 85  1  5.4174E-17 +/- 1.587%  5.0553E-17 +/- 1.582% 
+  87 86  1  5.4833E-17 +/- 1.586%  5.1209E-17 +/- 1.582% 
+  88 87  1  5.4815E-17 +/- 1.594%  5.1198E-17 +/- 1.590% 
+  89 88  1  5.4185E-17 +/- 1.597%  5.0550E-17 +/- 1.592% 
+  90 89  1  5.4505E-17 +/- 1.593%  5.0858E-17 +/- 1.589% 
+  91 90  1  5.3471E-17 +/- 1.605%  4.9874E-17 +/- 1.600% 
+  92 91  1  5.3817E-17 +/- 1.603%  5.0232E-17 +/- 1.599% 
+  93 92  1  5.4093E-17 +/- 1.596%  5.0481E-17 +/- 1.592% 
+  94 93  1  5.1938E-17 +/- 1.626%  4.8470E-17 +/- 1.620% 
+  95 94  1  5.1375E-17 +/- 1.615%  4.7982E-17 +/- 1.611% 
+  96 95  1  5.1618E-17 +/- 1.648%  4.8154E-17 +/- 1.644% 
+  97 96  1  5.1491E-17 +/- 1.624%  4.8067E-17 +/- 1.620% 
+  98 97  1  5.2979E-17 +/- 1.615%  4.9413E-17 +/- 1.611% 
+  99 98  1  5.2351E-17 +/- 1.631%  4.8846E-17 +/- 1.626% 
+ 100 99  1  5.1135E-17 +/- 1.651%  4.7715E-17 +/- 1.646% 
+ 101 **  1  5.0213E-17 +/- 1.652%  4.6875E-17 +/- 1.647% 
+ 102 **  1  5.1117E-17 +/- 0.900%  4.7718E-17 +/- 0.899% 
+ 103 **  1  5.0428E-17 +/- 0.909%  4.7071E-17 +/- 0.908% 
+ 104 **  1  4.9769E-17 +/- 0.913%  4.6452E-17 +/- 0.912% 
+ 105 **  1  4.8150E-17 +/- 0.927%  4.4946E-17 +/- 0.925% 
+ 106 **  1  4.7481E-17 +/- 0.933%  4.4314E-17 +/- 0.932% 
+ 107 **  1  4.6935E-17 +/- 0.944%  4.3789E-17 +/- 0.943% 
+ 108 **  1  4.5807E-17 +/- 0.955%  4.2757E-17 +/- 0.954% 
+ 109 **  1  4.5546E-17 +/- 0.954%  4.2520E-17 +/- 0.953% 
+ 110 **  1  4.4165E-17 +/- 0.966%  4.1223E-17 +/- 0.965% 
+ 111 **  1  4.4035E-17 +/- 0.971%  4.1107E-17 +/- 0.969% 
+ 112 **  1  4.2785E-17 +/- 0.988%  3.9944E-17 +/- 0.987% 
+ 113 **  1  4.2726E-17 +/- 0.989%  3.9875E-17 +/- 0.988% 
+ 114 **  1  4.2194E-17 +/- 0.996%  3.9385E-17 +/- 0.995% 
+ 115 **  1  4.0640E-17 +/- 1.005%  3.7932E-17 +/- 1.004% 
+ 116 **  1  4.0187E-17 +/- 1.020%  3.7506E-17 +/- 1.019% 
+ 117 **  1  3.9517E-17 +/- 1.022%  3.6886E-17 +/- 1.021% 
+ 118 **  1  3.8447E-17 +/- 1.037%  3.5904E-17 +/- 1.036% 
+ 119 **  1  3.8031E-17 +/- 1.045%  3.5504E-17 +/- 1.044% 
+ 120 **  1  3.7463E-17 +/- 1.048%  3.4965E-17 +/- 1.047% 
+ 121 **  1  3.6792E-17 +/- 1.063%  3.4345E-17 +/- 1.061% 
+ 122 **  1  3.6396E-17 +/- 1.060%  3.3966E-17 +/- 1.059% 
+ 123 **  1  3.6157E-17 +/- 1.074%  3.3747E-17 +/- 1.072% 
+ 124 **  1  3.5655E-17 +/- 1.078%  3.3294E-17 +/- 1.077% 
+ 125 **  1  3.4606E-17 +/- 1.090%  3.2310E-17 +/- 1.089% 
+ 126 **  1  3.4425E-17 +/- 1.098%  3.2130E-17 +/- 1.096% 
+ 127 **  1  3.3695E-17 +/- 1.100%  3.1453E-17 +/- 1.099% 
+ 128 **  1  3.3421E-17 +/- 1.106%  3.1204E-17 +/- 1.105% 
+ 129 **  1  3.2590E-17 +/- 1.124%  3.0417E-17 +/- 1.122% 
+ 130 **  1  3.2426E-17 +/- 1.132%  3.0267E-17 +/- 1.130% 
+ 131 **  1  3.2079E-17 +/- 1.137%  2.9948E-17 +/- 1.136% 
+ 132 **  1  3.1371E-17 +/- 1.150%  2.9296E-17 +/- 1.149% 
+ 133 **  1  3.1304E-17 +/- 1.154%  2.9224E-17 +/- 1.152% 
+ 134 **  1  3.0437E-17 +/- 1.161%  2.8419E-17 +/- 1.159% 
+ 135 **  1  2.9983E-17 +/- 1.171%  2.7985E-17 +/- 1.170% 
+ 136 **  1  2.9238E-17 +/- 1.189%  2.7293E-17 +/- 1.188% 
+ 137 **  1  2.8567E-17 +/- 1.192%  2.6671E-17 +/- 1.190% 
+ 138 **  1  2.8219E-17 +/- 1.194%  2.6352E-17 +/- 1.192% 
+ 139 **  1  2.7633E-17 +/- 1.212%  2.5808E-17 +/- 1.211% 
+ 140 **  1  2.7487E-17 +/- 1.223%  2.5667E-17 +/- 1.222% 
+ 141 **  1  2.7121E-17 +/- 1.220%  2.5318E-17 +/- 1.218% 
+ 142 **  1  2.6723E-17 +/- 1.239%  2.4954E-17 +/- 1.237% 
+ 143 **  1  2.6386E-17 +/- 1.248%  2.4640E-17 +/- 1.247% 
+ 144 **  1  2.6060E-17 +/- 1.254%  2.4331E-17 +/- 1.252% 
+ 145 **  1  2.5467E-17 +/- 1.266%  2.3788E-17 +/- 1.263% 
+ 146 **  1  2.5640E-17 +/- 1.267%  2.3934E-17 +/- 1.265% 
+ 147 **  1  2.5096E-17 +/- 1.283%  2.3435E-17 +/- 1.281% 
+ 148 **  1  2.5134E-17 +/- 1.287%  2.3457E-17 +/- 1.285% 
+ 149 **  1  2.4730E-17 +/- 1.286%  2.3091E-17 +/- 1.284% 
+ 150 **  1  2.3674E-17 +/- 1.312%  2.2103E-17 +/- 1.311% 
+ 151 **  1  2.3268E-17 +/- 1.317%  2.1723E-17 +/- 1.316% 
+ 152 **  1  2.3470E-17 +/- 1.327%  2.1916E-17 +/- 1.325% 
+ 153 **  1  2.2861E-17 +/- 1.342%  2.1345E-17 +/- 1.340% 
+ 154 **  1  2.2942E-17 +/- 1.334%  2.1418E-17 +/- 1.332% 
+ 155 **  1  2.1600E-17 +/- 1.367%  2.0168E-17 +/- 1.365% 
+ 156 **  1  2.1249E-17 +/- 1.375%  1.9844E-17 +/- 1.373% 
+ 157 **  1  2.1756E-17 +/- 1.360%  2.0315E-17 +/- 1.358% 
+ 158 **  1  2.1495E-17 +/- 1.386%  2.0074E-17 +/- 1.384% 
+ 159 **  1  2.0761E-17 +/- 1.393%  1.9394E-17 +/- 1.391% 
+ 160 **  1  2.0550E-17 +/- 1.396%  1.9185E-17 +/- 1.394% 
+ 161 **  1  2.0173E-17 +/- 1.423%  1.8837E-17 +/- 1.421% 
+ 162 **  1  1.9756E-17 +/- 1.439%  1.8451E-17 +/- 1.437% 
+ 163 **  1  1.9504E-17 +/- 1.434%  1.8211E-17 +/- 1.432% 
+ 164 **  1  1.9229E-17 +/- 1.451%  1.7961E-17 +/- 1.449% 
+ 165 **  1  1.9828E-17 +/- 1.443%  1.8518E-17 +/- 1.441% 
+ 166 **  1  1.8825E-17 +/- 1.460%  1.7583E-17 +/- 1.458% 
+ 167 **  1  1.8057E-17 +/- 1.502%  1.6862E-17 +/- 1.500% 
+ 168 **  1  1.8132E-17 +/- 1.495%  1.6937E-17 +/- 1.493% 
+ 169 **  1  1.7657E-17 +/- 1.504%  1.6494E-17 +/- 1.501% 
+ 170 **  1  1.7799E-17 +/- 1.521%  1.6617E-17 +/- 1.519% 
+ 171 **  1  1.7140E-17 +/- 1.543%  1.6007E-17 +/- 1.541% 
+ 172 **  1  1.6928E-17 +/- 1.547%  1.5806E-17 +/- 1.545% 
+ 173 **  1  1.6902E-17 +/- 1.554%  1.5786E-17 +/- 1.552% 
+ 174 **  1  1.6507E-17 +/- 1.546%  1.5414E-17 +/- 1.543% 
+ 175 **  1  1.6658E-17 +/- 1.570%  1.5554E-17 +/- 1.566% 
+ 176 **  1  1.6381E-17 +/- 1.573%  1.5301E-17 +/- 1.571% 
+ 177 **  1  1.5868E-17 +/- 1.596%  1.4816E-17 +/- 1.593% 
+ 178 **  1  1.5526E-17 +/- 1.196%  1.4503E-17 +/- 1.195% 
+ 179 **  1  1.5337E-17 +/- 1.194%  1.4324E-17 +/- 1.193% 
+ 180 **  1  1.1800E-17 +/- 0.352%  1.1022E-17 +/- 0.352% 
+ 181  1  2  3.5767E-19 +/- 0.327%  3.3244E-19 +/- 0.329% 
+ 182  2  2  5.4506E-19 +/- 0.230%  5.0729E-19 +/- 0.231% 
+ 183  3  2  6.4739E-19 +/- 0.199%  6.0284E-19 +/- 0.200% 
+ 184  4  2  7.1095E-19 +/- 0.181%  6.6216E-19 +/- 0.182% 
+ 185  5  2  7.5417E-19 +/- 0.183%  7.0253E-19 +/- 0.183% 
+ 186  6  2  7.8011E-19 +/- 0.169%  7.2674E-19 +/- 0.170% 
+ 187  7  2  7.9654E-19 +/- 0.162%  7.4205E-19 +/- 0.162% 
+ 188  8  2  8.0829E-19 +/- 0.165%  7.5298E-19 +/- 0.165% 
+ 189  9  2  8.1416E-19 +/- 0.160%  7.5846E-19 +/- 0.160% 
+ 190 10  2  8.1768E-19 +/- 0.158%  7.6169E-19 +/- 0.158% 
+ 191 11  2  8.2030E-19 +/- 0.171%  7.6413E-19 +/- 0.172% 
+ 192 12  2  8.1886E-19 +/- 0.164%  7.6277E-19 +/- 0.164% 
+ 193 13  2  8.1979E-19 +/- 0.170%  7.6360E-19 +/- 0.170% 
+ 194 14  2  8.1651E-19 +/- 0.165%  7.6051E-19 +/- 0.165% 
+ 195 15  2  8.1525E-19 +/- 0.163%  7.5928E-19 +/- 0.163% 
+ 196 16  2  8.1171E-19 +/- 0.159%  7.5597E-19 +/- 0.159% 
+ 197 17  2  8.0842E-19 +/- 0.157%  7.5291E-19 +/- 0.158% 
+ 198 18  2  8.0681E-19 +/- 0.157%  7.5137E-19 +/- 0.158% 
+ 199 19  2  8.0517E-19 +/- 0.159%  7.4983E-19 +/- 0.159% 
+ 200 20  2  8.0165E-19 +/- 0.151%  7.4653E-19 +/- 0.152% 
+ 201 21  2  8.0219E-19 +/- 0.200%  7.4704E-19 +/- 0.200% 
+ 202 22  2  8.0110E-19 +/- 0.194%  7.4598E-19 +/- 0.194% 
+ 203 23  2  7.9909E-19 +/- 0.173%  7.4412E-19 +/- 0.174% 
+ 204 24  2  8.0073E-19 +/- 0.194%  7.4561E-19 +/- 0.194% 
+ 205 25  2  8.0038E-19 +/- 0.201%  7.4531E-19 +/- 0.201% 
+ 206 26  2  7.9987E-19 +/- 0.197%  7.4482E-19 +/- 0.198% 
+ 207 27  2  7.9746E-19 +/- 0.194%  7.4258E-19 +/- 0.194% 
+ 208 28  2  7.9692E-19 +/- 0.188%  7.4205E-19 +/- 0.188% 
+ 209 29  2  7.9540E-19 +/- 0.182%  7.4065E-19 +/- 0.182% 
+ 210 30  2  7.9671E-19 +/- 0.209%  7.4186E-19 +/- 0.209% 
+ 211 31  2  7.9444E-19 +/- 0.196%  7.3970E-19 +/- 0.196% 
+ 212 32  2  7.9453E-19 +/- 0.205%  7.3979E-19 +/- 0.205% 
+ 213 33  2  7.9306E-19 +/- 0.190%  7.3839E-19 +/- 0.190% 
+ 214 34  2  7.9191E-19 +/- 0.188%  7.3735E-19 +/- 0.188% 
+ 215 35  2  7.9108E-19 +/- 0.184%  7.3657E-19 +/- 0.184% 
+ 216 36  2  7.9106E-19 +/- 0.182%  7.3653E-19 +/- 0.183% 
+ 217 37  2  7.9260E-19 +/- 0.183%  7.3796E-19 +/- 0.183% 
+ 218 38  2  7.9344E-19 +/- 0.178%  7.3876E-19 +/- 0.179% 
+ 219 39  2  7.9766E-19 +/- 0.175%  7.4268E-19 +/- 0.175% 
+ 220 40  2  8.1147E-19 +/- 0.184%  7.5552E-19 +/- 0.184% 
+ 221 41  2  7.7465E-19 +/- 0.133%  7.1786E-19 +/- 0.134% 
+ 222 42  2  7.6583E-19 +/- 0.145%  7.0967E-19 +/- 0.145% 
+ 223 43  2  7.5888E-19 +/- 0.145%  7.0320E-19 +/- 0.145% 
+ 224 44  2  7.5331E-19 +/- 0.142%  6.9803E-19 +/- 0.142% 
+ 225 45  2  7.4928E-19 +/- 0.147%  6.9427E-19 +/- 0.147% 
+ 226 46  2  7.4398E-19 +/- 0.140%  6.8932E-19 +/- 0.141% 
+ 227 47  2  7.3879E-19 +/- 0.143%  6.8449E-19 +/- 0.143% 
+ 228 48  2  7.3510E-19 +/- 0.144%  6.8105E-19 +/- 0.144% 
+ 229 49  2  7.3158E-19 +/- 0.148%  6.7779E-19 +/- 0.148% 
+ 230 50  2  7.2778E-19 +/- 0.153%  6.7423E-19 +/- 0.154% 
+ 231 51  2  7.2193E-19 +/- 0.146%  6.6879E-19 +/- 0.146% 
+ 232 52  2  7.1732E-19 +/- 0.155%  6.6450E-19 +/- 0.156% 
+ 233 53  2  7.1088E-19 +/- 0.147%  6.5851E-19 +/- 0.147% 
+ 234 54  2  7.0612E-19 +/- 0.148%  6.5408E-19 +/- 0.148% 
+ 235 55  2  7.0001E-19 +/- 0.133%  6.4841E-19 +/- 0.134% 
+ 236 56  2  6.9843E-19 +/- 0.152%  6.4693E-19 +/- 0.153% 
+ 237 57  2  6.9233E-19 +/- 0.146%  6.4125E-19 +/- 0.147% 
+ 238 58  2  6.8824E-19 +/- 0.152%  6.3746E-19 +/- 0.153% 
+ 239 59  2  6.8252E-19 +/- 0.148%  6.3214E-19 +/- 0.149% 
+ 240 60  2  6.7755E-19 +/- 0.147%  6.2753E-19 +/- 0.147% 
+ 241 61  2  6.7288E-19 +/- 0.147%  6.2319E-19 +/- 0.148% 
+ 242 62  2  6.6710E-19 +/- 0.144%  6.1783E-19 +/- 0.144% 
+ 243 63  2  6.6287E-19 +/- 0.152%  6.1390E-19 +/- 0.153% 
+ 244 64  2  6.5675E-19 +/- 0.141%  6.0820E-19 +/- 0.141% 
+ 245 65  2  6.5240E-19 +/- 0.145%  6.0418E-19 +/- 0.145% 
+ 246 66  2  6.4978E-19 +/- 0.159%  6.0175E-19 +/- 0.160% 
+ 247 67  2  6.4358E-19 +/- 0.151%  5.9600E-19 +/- 0.152% 
+ 248 68  2  6.3867E-19 +/- 0.151%  5.9144E-19 +/- 0.151% 
+ 249 69  2  6.3312E-19 +/- 0.147%  5.8628E-19 +/- 0.147% 
+ 250 70  2  6.2814E-19 +/- 0.153%  5.8166E-19 +/- 0.154% 
+ 251 71  2  6.2207E-19 +/- 0.145%  5.7603E-19 +/- 0.145% 
+ 252 72  2  6.1908E-19 +/- 0.150%  5.7326E-19 +/- 0.150% 
+ 253 73  2  6.1393E-19 +/- 0.153%  5.6847E-19 +/- 0.153% 
+ 254 74  2  6.0792E-19 +/- 0.144%  5.6289E-19 +/- 0.145% 
+ 255 75  2  6.0257E-19 +/- 0.135%  5.5792E-19 +/- 0.135% 
+ 256 76  2  5.9973E-19 +/- 0.153%  5.5529E-19 +/- 0.154% 
+ 257 77  2  5.9420E-19 +/- 0.151%  5.5016E-19 +/- 0.152% 
+ 258 78  2  5.9034E-19 +/- 0.160%  5.4657E-19 +/- 0.160% 
+ 259 79  2  5.8598E-19 +/- 0.164%  5.4251E-19 +/- 0.165% 
+ 260 80  2  5.7503E-19 +/- 0.171%  5.3232E-19 +/- 0.171% 
+ 261 81  2  5.7530E-19 +/- 0.229%  5.3527E-19 +/- 0.229% 
+ 262 82  2  5.7519E-19 +/- 0.197%  5.3517E-19 +/- 0.198% 
+ 263 83  2  5.7619E-19 +/- 0.213%  5.3606E-19 +/- 0.214% 
+ 264 84  2  5.7491E-19 +/- 0.187%  5.3484E-19 +/- 0.187% 
+ 265 85  2  5.7532E-19 +/- 0.192%  5.3521E-19 +/- 0.193% 
+ 266 86  2  5.7541E-19 +/- 0.192%  5.3532E-19 +/- 0.192% 
+ 267 87  2  5.7589E-19 +/- 0.213%  5.3577E-19 +/- 0.214% 
+ 268 88  2  5.7521E-19 +/- 0.208%  5.3513E-19 +/- 0.209% 
+ 269 89  2  5.7423E-19 +/- 0.204%  5.3421E-19 +/- 0.204% 
+ 270 90  2  5.7286E-19 +/- 0.190%  5.3294E-19 +/- 0.190% 
+ 271 91  2  5.7187E-19 +/- 0.193%  5.3201E-19 +/- 0.193% 
+ 272 92  2  5.7211E-19 +/- 0.203%  5.3225E-19 +/- 0.204% 
+ 273 93  2  5.7030E-19 +/- 0.190%  5.3054E-19 +/- 0.190% 
+ 274 94  2  5.6852E-19 +/- 0.179%  5.2890E-19 +/- 0.179% 
+ 275 95  2  5.6834E-19 +/- 0.192%  5.2873E-19 +/- 0.193% 
+ 276 96  2  5.6648E-19 +/- 0.175%  5.2701E-19 +/- 0.175% 
+ 277 97  2  5.6675E-19 +/- 0.210%  5.2727E-19 +/- 0.211% 
+ 278 98  2  5.6646E-19 +/- 0.201%  5.2699E-19 +/- 0.202% 
+ 279 99  2  5.6428E-19 +/- 0.185%  5.2496E-19 +/- 0.185% 
+ 280 **  2  5.6350E-19 +/- 0.208%  5.2424E-19 +/- 0.209% 
+ 281 **  2  5.6208E-19 +/- 0.155%  5.2292E-19 +/- 0.155% 
+ 282 **  2  5.5705E-19 +/- 0.150%  5.1825E-19 +/- 0.151% 
+ 283 **  2  5.5193E-19 +/- 0.148%  5.1348E-19 +/- 0.148% 
+ 284 **  2  5.4747E-19 +/- 0.153%  5.0933E-19 +/- 0.154% 
+ 285 **  2  5.4195E-19 +/- 0.146%  5.0419E-19 +/- 0.146% 
+ 286 **  2  5.3788E-19 +/- 0.145%  5.0042E-19 +/- 0.146% 
+ 287 **  2  5.3433E-19 +/- 0.160%  4.9709E-19 +/- 0.161% 
+ 288 **  2  5.2917E-19 +/- 0.160%  4.9230E-19 +/- 0.160% 
+ 289 **  2  5.2315E-19 +/- 0.146%  4.8669E-19 +/- 0.147% 
+ 290 **  2  5.1911E-19 +/- 0.153%  4.8294E-19 +/- 0.153% 
+ 291 **  2  5.1354E-19 +/- 0.146%  4.7776E-19 +/- 0.146% 
+ 292 **  2  5.0837E-19 +/- 0.143%  4.7295E-19 +/- 0.143% 
+ 293 **  2  5.0397E-19 +/- 0.144%  4.6886E-19 +/- 0.144% 
+ 294 **  2  4.9975E-19 +/- 0.145%  4.6494E-19 +/- 0.145% 
+ 295 **  2  4.9634E-19 +/- 0.162%  4.6177E-19 +/- 0.163% 
+ 296 **  2  4.9136E-19 +/- 0.164%  4.5715E-19 +/- 0.164% 
+ 297 **  2  4.8623E-19 +/- 0.155%  4.5237E-19 +/- 0.155% 
+ 298 **  2  4.8089E-19 +/- 0.141%  4.4740E-19 +/- 0.141% 
+ 299 **  2  4.7593E-19 +/- 0.139%  4.4280E-19 +/- 0.140% 
+ 300 **  2  4.7122E-19 +/- 0.129%  4.3842E-19 +/- 0.130% 
+ 301 **  2  4.6760E-19 +/- 0.146%  4.3506E-19 +/- 0.147% 
+ 302 **  2  4.6355E-19 +/- 0.133%  4.3130E-19 +/- 0.133% 
+ 303 **  2  4.5981E-19 +/- 0.147%  4.2781E-19 +/- 0.147% 
+ 304 **  2  4.5546E-19 +/- 0.144%  4.2378E-19 +/- 0.144% 
+ 305 **  2  4.5133E-19 +/- 0.148%  4.1993E-19 +/- 0.148% 
+ 306 **  2  4.4646E-19 +/- 0.138%  4.1540E-19 +/- 0.139% 
+ 307 **  2  4.4219E-19 +/- 0.141%  4.1144E-19 +/- 0.142% 
+ 308 **  2  4.3856E-19 +/- 0.144%  4.0806E-19 +/- 0.145% 
+ 309 **  2  4.3451E-19 +/- 0.143%  4.0431E-19 +/- 0.143% 
+ 310 **  2  4.3058E-19 +/- 0.140%  4.0065E-19 +/- 0.141% 
+ 311 **  2  4.2705E-19 +/- 0.157%  3.9737E-19 +/- 0.157% 
+ 312 **  2  4.2278E-19 +/- 0.148%  3.9341E-19 +/- 0.149% 
+ 313 **  2  4.1812E-19 +/- 0.143%  3.8907E-19 +/- 0.144% 
+ 314 **  2  4.1423E-19 +/- 0.147%  3.8547E-19 +/- 0.148% 
+ 315 **  2  4.1032E-19 +/- 0.147%  3.8183E-19 +/- 0.148% 
+ 316 **  2  4.0680E-19 +/- 0.152%  3.7854E-19 +/- 0.152% 
+ 317 **  2  4.0199E-19 +/- 0.131%  3.7408E-19 +/- 0.131% 
+ 318 **  2  3.9913E-19 +/- 0.149%  3.7142E-19 +/- 0.150% 
+ 319 **  2  3.9464E-19 +/- 0.140%  3.6724E-19 +/- 0.140% 
+ 320 **  2  3.9109E-19 +/- 0.147%  3.6395E-19 +/- 0.147% 
+ 321 **  2  3.8744E-19 +/- 0.143%  3.6056E-19 +/- 0.144% 
+ 322 **  2  3.8368E-19 +/- 0.142%  3.5706E-19 +/- 0.142% 
+ 323 **  2  3.8091E-19 +/- 0.149%  3.5450E-19 +/- 0.150% 
+ 324 **  2  3.7785E-19 +/- 0.165%  3.5166E-19 +/- 0.165% 
+ 325 **  2  3.7319E-19 +/- 0.144%  3.4732E-19 +/- 0.145% 
+ 326 **  2  3.6955E-19 +/- 0.145%  3.4393E-19 +/- 0.145% 
+ 327 **  2  3.6634E-19 +/- 0.147%  3.4095E-19 +/- 0.148% 
+ 328 **  2  3.6304E-19 +/- 0.165%  3.3788E-19 +/- 0.165% 
+ 329 **  2  3.5855E-19 +/- 0.131%  3.3371E-19 +/- 0.132% 
+ 330 **  2  3.5576E-19 +/- 0.150%  3.3112E-19 +/- 0.151% 
+ 331 **  2  3.5253E-19 +/- 0.156%  3.2812E-19 +/- 0.156% 
+ 332 **  2  3.4961E-19 +/- 0.159%  3.2541E-19 +/- 0.160% 
+ 333 **  2  3.4614E-19 +/- 0.159%  3.2218E-19 +/- 0.160% 
+ 334 **  2  3.4226E-19 +/- 0.156%  3.1857E-19 +/- 0.157% 
+ 335 **  2  3.3881E-19 +/- 0.143%  3.1537E-19 +/- 0.143% 
+ 336 **  2  3.3592E-19 +/- 0.148%  3.1268E-19 +/- 0.149% 
+ 337 **  2  3.3219E-19 +/- 0.143%  3.0921E-19 +/- 0.144% 
+ 338 **  2  3.2878E-19 +/- 0.135%  3.0605E-19 +/- 0.136% 
+ 339 **  2  3.2633E-19 +/- 0.161%  3.0376E-19 +/- 0.161% 
+ 340 **  2  3.2284E-19 +/- 0.142%  3.0052E-19 +/- 0.143% 
+ 341 **  2  3.1976E-19 +/- 0.142%  2.9766E-19 +/- 0.143% 
+ 342 **  2  3.1759E-19 +/- 0.170%  2.9566E-19 +/- 0.171% 
+ 343 **  2  3.1399E-19 +/- 0.163%  2.9230E-19 +/- 0.163% 
+ 344 **  2  3.1081E-19 +/- 0.155%  2.8935E-19 +/- 0.156% 
+ 345 **  2  3.0672E-19 +/- 0.127%  2.8554E-19 +/- 0.127% 
+ 346 **  2  3.0359E-19 +/- 0.111%  2.8263E-19 +/- 0.112% 
+ 347 **  2  3.0100E-19 +/- 0.138%  2.8023E-19 +/- 0.138% 
+ 348 **  2  2.9800E-19 +/- 0.137%  2.7744E-19 +/- 0.138% 
+ 349 **  2  2.9495E-19 +/- 0.129%  2.7460E-19 +/- 0.129% 
+ 350 **  2  2.9223E-19 +/- 0.134%  2.7207E-19 +/- 0.134% 
+ 351 **  2  2.8931E-19 +/- 0.137%  2.6935E-19 +/- 0.137% 
+ 352 **  2  2.8597E-19 +/- 0.122%  2.6626E-19 +/- 0.123% 
+ 353 **  2  2.8411E-19 +/- 0.148%  2.6452E-19 +/- 0.148% 
+ 354 **  2  2.8184E-19 +/- 0.172%  2.6243E-19 +/- 0.172% 
+ 355 **  2  2.7857E-19 +/- 0.140%  2.5939E-19 +/- 0.141% 
+ 356 **  2  2.7521E-19 +/- 0.124%  2.5625E-19 +/- 0.124% 
+ 357 **  2  2.7118E-19 +/- 0.118%  2.5252E-19 +/- 0.119% 
+ 358 **  2  2.6586E-19 +/- 0.120%  2.4756E-19 +/- 0.120% 
+ 359 **  2  2.1982E-19 +/- 0.048%  2.0481E-19 +/- 0.048% 
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+             T  : Total dose (Gray/incident particle)                         
+             T-S: Total dose minus stoppers                                   
+             K  : Kerma                                                       
+             D/K: Dose to kerma                                               
+
+         0.0000                 0.0250                15.0000
+    0.0000----------------------------------------------
+          |IRL  2 IZ   1 IX   1  |IRL181 IZ   1 IX   2 |
+          |T  : 3.623E-17+- 1.6% |T  : 3.577E-19+- 0.3%|
+          |T-S: 3.370E-17+- 1.6% |T-S: 3.324E-19+- 0.3%|
+          |K  : 1.284E-16+- 2.4% |K  : 8.325E-19+- 0.3%|
+          |D/K: 2.821E-01+- 2.9% |D/K: 4.296E-01+- 0.4%|
+    0.1500----------------------------------------------
+          |IRL  3 IZ   2 IX   1  |IRL182 IZ   2 IX   2 |
+          |T  : 6.842E-17+- 1.0% |T  : 5.451E-19+- 0.2%|
+          |T-S: 6.373E-17+- 1.0% |T-S: 5.073E-19+- 0.2%|
+          |K  : 1.237E-16+- 2.4% |K  : 8.369E-19+- 0.3%|
+          |D/K: 5.531E-01+- 2.6% |D/K: 6.513E-01+- 0.4%|
+    0.3000----------------------------------------------
+          |IRL  4 IZ   3 IX   1  |IRL183 IZ   3 IX   2 |
+          |T  : 8.533E-17+- 0.9% |T  : 6.474E-19+- 0.2%|
+          |T-S: 7.954E-17+- 0.9% |T-S: 6.028E-19+- 0.2%|
+          |K  : 1.227E-16+- 2.4% |K  : 8.304E-19+- 0.3%|
+          |D/K: 6.955E-01+- 2.6% |D/K: 7.796E-01+- 0.3%|
+    0.4500----------------------------------------------
+          |IRL  5 IZ   4 IX   1  |IRL184 IZ   4 IX   2 |
+          |T  : 9.615E-17+- 0.8% |T  : 7.109E-19+- 0.2%|
+          |T-S: 8.967E-17+- 0.8% |T-S: 6.622E-19+- 0.2%|
+          |K  : 1.194E-16+- 2.5% |K  : 8.341E-19+- 0.3%|
+          |D/K: 8.052E-01+- 2.6% |D/K: 8.524E-01+- 0.3%|
+    0.6000----------------------------------------------
+          |IRL  6 IZ   5 IX   1  |IRL185 IZ   5 IX   2 |
+          |T  : 1.035E-16+- 0.8% |T  : 7.542E-19+- 0.2%|
+          |T-S: 9.656E-17+- 0.8% |T-S: 7.025E-19+- 0.2%|
+          |K  : 1.203E-16+- 2.5% |K  : 8.303E-19+- 0.3%|
+          |D/K: 8.601E-01+- 2.6% |D/K: 9.083E-01+- 0.3%|
+    0.7500----------------------------------------------
+          |IRL  7 IZ   6 IX   1  |IRL186 IZ   6 IX   2 |
+          |T  : 1.086E-16+- 0.8% |T  : 7.801E-19+- 0.2%|
+          |T-S: 1.013E-16+- 0.8% |T-S: 7.267E-19+- 0.2%|
+          |K  : 1.125E-16+- 2.5% |K  : 8.285E-19+- 0.3%|
+          |D/K: 9.654E-01+- 2.6% |D/K: 9.416E-01+- 0.3%|
+    0.9000----------------------------------------------
+          |IRL  8 IZ   7 IX   1  |IRL187 IZ   7 IX   2 |
+          |T  : 1.101E-16+- 0.8% |T  : 7.965E-19+- 0.2%|
+          |T-S: 1.027E-16+- 0.8% |T-S: 7.420E-19+- 0.2%|
+          |K  : 1.132E-16+- 2.5% |K  : 8.275E-19+- 0.3%|
+          |D/K: 9.725E-01+- 2.7% |D/K: 9.626E-01+- 0.3%|
+    1.0500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+    1.0500----------------------------------------------
+          |IRL  9 IZ   8 IX   1  |IRL188 IZ   8 IX   2 |
+          |T  : 1.105E-16+- 0.8% |T  : 8.083E-19+- 0.2%|
+          |T-S: 1.031E-16+- 0.8% |T-S: 7.530E-19+- 0.2%|
+          |K  : 1.180E-16+- 2.5% |K  : 8.236E-19+- 0.2%|
+          |D/K: 9.361E-01+- 2.6% |D/K: 9.814E-01+- 0.3%|
+    1.2000----------------------------------------------
+          |IRL 10 IZ   9 IX   1  |IRL189 IZ   9 IX   2 |
+          |T  : 1.147E-16+- 0.8% |T  : 8.142E-19+- 0.2%|
+          |T-S: 1.070E-16+- 0.8% |T-S: 7.585E-19+- 0.2%|
+          |K  : 1.196E-16+- 2.5% |K  : 8.230E-19+- 0.3%|
+          |D/K: 9.589E-01+- 2.6% |D/K: 9.893E-01+- 0.3%|
+    1.3500----------------------------------------------
+          |IRL 11 IZ  10 IX   1  |IRL190 IZ  10 IX   2 |
+          |T  : 1.137E-16+- 0.8% |T  : 8.177E-19+- 0.2%|
+          |T-S: 1.061E-16+- 0.8% |T-S: 7.617E-19+- 0.2%|
+          |K  : 1.142E-16+- 2.6% |K  : 8.227E-19+- 0.3%|
+          |D/K: 9.961E-01+- 2.7% |D/K: 9.939E-01+- 0.3%|
+    1.5000----------------------------------------------
+          |IRL 12 IZ  11 IX   1  |IRL191 IZ  11 IX   2 |
+          |T  : 1.146E-16+- 0.8% |T  : 8.203E-19+- 0.2%|
+          |T-S: 1.069E-16+- 0.8% |T-S: 7.641E-19+- 0.2%|
+          |K  : 1.128E-16+- 2.5% |K  : 8.206E-19+- 0.3%|
+          |D/K: 1.016E+00+- 2.7% |D/K: 9.997E-01+- 0.3%|
+    1.6500----------------------------------------------
+          |IRL 13 IZ  12 IX   1  |IRL192 IZ  12 IX   2 |
+          |T  : 1.138E-16+- 0.8% |T  : 8.189E-19+- 0.2%|
+          |T-S: 1.062E-16+- 0.8% |T-S: 7.628E-19+- 0.2%|
+          |K  : 1.137E-16+- 2.5% |K  : 8.186E-19+- 0.3%|
+          |D/K: 1.001E+00+- 2.6% |D/K: 1.000E+00+- 0.3%|
+    1.8000----------------------------------------------
+          |IRL 14 IZ  13 IX   1  |IRL193 IZ  13 IX   2 |
+          |T  : 1.142E-16+- 0.8% |T  : 8.198E-19+- 0.2%|
+          |T-S: 1.066E-16+- 0.8% |T-S: 7.636E-19+- 0.2%|
+          |K  : 1.171E-16+- 2.5% |K  : 8.183E-19+- 0.3%|
+          |D/K: 9.754E-01+- 2.6% |D/K: 1.002E+00+- 0.3%|
+    1.9500----------------------------------------------
+          |IRL 15 IZ  14 IX   1  |IRL194 IZ  14 IX   2 |
+          |T  : 1.115E-16+- 0.8% |T  : 8.165E-19+- 0.2%|
+          |T-S: 1.040E-16+- 0.8% |T-S: 7.605E-19+- 0.2%|
+          |K  : 1.086E-16+- 2.6% |K  : 8.169E-19+- 0.3%|
+          |D/K: 1.027E+00+- 2.7% |D/K: 9.995E-01+- 0.3%|
+    2.1000----------------------------------------------
+          |IRL 16 IZ  15 IX   1  |IRL195 IZ  15 IX   2 |
+          |T  : 1.125E-16+- 0.8% |T  : 8.152E-19+- 0.2%|
+          |T-S: 1.049E-16+- 0.8% |T-S: 7.593E-19+- 0.2%|
+          |K  : 1.077E-16+- 2.6% |K  : 8.093E-19+- 0.3%|
+          |D/K: 1.044E+00+- 2.7% |D/K: 1.007E+00+- 0.3%|
+    2.2500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+    2.2500----------------------------------------------
+          |IRL 17 IZ  16 IX   1  |IRL196 IZ  16 IX   2 |
+          |T  : 1.087E-16+- 0.8% |T  : 8.117E-19+- 0.2%|
+          |T-S: 1.014E-16+- 0.8% |T-S: 7.560E-19+- 0.2%|
+          |K  : 1.080E-16+- 2.7% |K  : 8.095E-19+- 0.3%|
+          |D/K: 1.007E+00+- 2.8% |D/K: 1.003E+00+- 0.3%|
+    2.4000----------------------------------------------
+          |IRL 18 IZ  17 IX   1  |IRL197 IZ  17 IX   2 |
+          |T  : 1.095E-16+- 0.8% |T  : 8.084E-19+- 0.2%|
+          |T-S: 1.022E-16+- 0.8% |T-S: 7.529E-19+- 0.2%|
+          |K  : 1.102E-16+- 2.6% |K  : 8.063E-19+- 0.3%|
+          |D/K: 9.934E-01+- 2.7% |D/K: 1.003E+00+- 0.3%|
+    2.5500----------------------------------------------
+          |IRL 19 IZ  18 IX   1  |IRL198 IZ  18 IX   2 |
+          |T  : 1.070E-16+- 0.8% |T  : 8.068E-19+- 0.2%|
+          |T-S: 9.979E-17+- 0.8% |T-S: 7.514E-19+- 0.2%|
+          |K  : 1.069E-16+- 2.6% |K  : 8.063E-19+- 0.3%|
+          |D/K: 1.001E+00+- 2.8% |D/K: 1.001E+00+- 0.3%|
+    2.7000----------------------------------------------
+          |IRL 20 IZ  19 IX   1  |IRL199 IZ  19 IX   2 |
+          |T  : 1.060E-16+- 0.8% |T  : 8.052E-19+- 0.2%|
+          |T-S: 9.886E-17+- 0.8% |T-S: 7.498E-19+- 0.2%|
+          |K  : 1.066E-16+- 2.6% |K  : 8.019E-19+- 0.3%|
+          |D/K: 9.940E-01+- 2.7% |D/K: 1.004E+00+- 0.3%|
+    2.8500----------------------------------------------
+          |IRL 21 IZ  20 IX   1  |IRL200 IZ  20 IX   2 |
+          |T  : 1.064E-16+- 0.8% |T  : 8.017E-19+- 0.2%|
+          |T-S: 9.926E-17+- 0.8% |T-S: 7.465E-19+- 0.2%|
+          |K  : 1.047E-16+- 2.7% |K  : 8.009E-19+- 0.3%|
+          |D/K: 1.016E+00+- 2.8% |D/K: 1.001E+00+- 0.3%|
+    3.0000----------------------------------------------
+          |IRL 22 IZ  21 IX   1  |IRL201 IZ  21 IX   2 |
+          |T  : 1.056E-16+- 1.2% |T  : 8.022E-19+- 0.2%|
+          |T-S: 9.847E-17+- 1.2% |T-S: 7.470E-19+- 0.2%|
+          |K  : 1.047E-16+- 4.5% |K  : 8.011E-19+- 0.5%|
+          |D/K: 1.008E+00+- 4.6% |D/K: 1.001E+00+- 0.5%|
+    3.0500----------------------------------------------
+          |IRL 23 IZ  22 IX   1  |IRL202 IZ  22 IX   2 |
+          |T  : 1.033E-16+- 1.2% |T  : 8.011E-19+- 0.2%|
+          |T-S: 9.641E-17+- 1.2% |T-S: 7.460E-19+- 0.2%|
+          |K  : 1.029E-16+- 4.7% |K  : 7.946E-19+- 0.4%|
+          |D/K: 1.004E+00+- 4.8% |D/K: 1.008E+00+- 0.5%|
+    3.1000----------------------------------------------
+          |IRL 24 IZ  23 IX   1  |IRL203 IZ  23 IX   2 |
+          |T  : 1.051E-16+- 1.2% |T  : 7.991E-19+- 0.2%|
+          |T-S: 9.808E-17+- 1.2% |T-S: 7.441E-19+- 0.2%|
+          |K  : 1.082E-16+- 4.6% |K  : 7.999E-19+- 0.4%|
+          |D/K: 9.719E-01+- 4.8% |D/K: 9.990E-01+- 0.5%|
+    3.1500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+    3.1500----------------------------------------------
+          |IRL 25 IZ  24 IX   1  |IRL204 IZ  24 IX   2 |
+          |T  : 1.023E-16+- 1.2% |T  : 8.007E-19+- 0.2%|
+          |T-S: 9.542E-17+- 1.2% |T-S: 7.456E-19+- 0.2%|
+          |K  : 1.113E-16+- 4.5% |K  : 7.973E-19+- 0.4%|
+          |D/K: 9.190E-01+- 4.6% |D/K: 1.004E+00+- 0.5%|
+    3.2000----------------------------------------------
+          |IRL 26 IZ  25 IX   1  |IRL205 IZ  25 IX   2 |
+          |T  : 1.031E-16+- 1.2% |T  : 8.004E-19+- 0.2%|
+          |T-S: 9.614E-17+- 1.2% |T-S: 7.453E-19+- 0.2%|
+          |K  : 1.019E-16+- 4.7% |K  : 7.877E-19+- 0.4%|
+          |D/K: 1.012E+00+- 4.8% |D/K: 1.016E+00+- 0.4%|
+    3.2500----------------------------------------------
+          |IRL 27 IZ  26 IX   1  |IRL206 IZ  26 IX   2 |
+          |T  : 1.043E-16+- 1.2% |T  : 7.999E-19+- 0.2%|
+          |T-S: 9.723E-17+- 1.2% |T-S: 7.448E-19+- 0.2%|
+          |K  : 1.014E-16+- 4.5% |K  : 7.942E-19+- 0.4%|
+          |D/K: 1.028E+00+- 4.7% |D/K: 1.007E+00+- 0.5%|
+    3.3000----------------------------------------------
+          |IRL 28 IZ  27 IX   1  |IRL207 IZ  27 IX   2 |
+          |T  : 1.017E-16+- 1.2% |T  : 7.975E-19+- 0.2%|
+          |T-S: 9.493E-17+- 1.2% |T-S: 7.426E-19+- 0.2%|
+          |K  : 9.304E-17+- 4.7% |K  : 8.035E-19+- 0.5%|
+          |D/K: 1.093E+00+- 4.8% |D/K: 9.924E-01+- 0.6%|
+    3.3500----------------------------------------------
+          |IRL 29 IZ  28 IX   1  |IRL208 IZ  28 IX   2 |
+          |T  : 1.025E-16+- 1.2% |T  : 7.969E-19+- 0.2%|
+          |T-S: 9.563E-17+- 1.2% |T-S: 7.420E-19+- 0.2%|
+          |K  : 1.027E-16+- 4.5% |K  : 7.935E-19+- 0.5%|
+          |D/K: 9.984E-01+- 4.7% |D/K: 1.004E+00+- 0.5%|
+    3.4000----------------------------------------------
+          |IRL 30 IZ  29 IX   1  |IRL209 IZ  29 IX   2 |
+          |T  : 9.925E-17+- 1.2% |T  : 7.954E-19+- 0.2%|
+          |T-S: 9.257E-17+- 1.2% |T-S: 7.407E-19+- 0.2%|
+          |K  : 9.720E-17+- 4.7% |K  : 7.940E-19+- 0.4%|
+          |D/K: 1.021E+00+- 4.8% |D/K: 1.002E+00+- 0.5%|
+    3.4500----------------------------------------------
+          |IRL 31 IZ  30 IX   1  |IRL210 IZ  30 IX   2 |
+          |T  : 1.004E-16+- 1.2% |T  : 7.967E-19+- 0.2%|
+          |T-S: 9.364E-17+- 1.2% |T-S: 7.419E-19+- 0.2%|
+          |K  : 9.764E-17+- 4.6% |K  : 7.906E-19+- 0.4%|
+          |D/K: 1.028E+00+- 4.8% |D/K: 1.008E+00+- 0.5%|
+    3.5000----------------------------------------------
+          |IRL 32 IZ  31 IX   1  |IRL211 IZ  31 IX   2 |
+          |T  : 9.977E-17+- 1.2% |T  : 7.944E-19+- 0.2%|
+          |T-S: 9.307E-17+- 1.2% |T-S: 7.397E-19+- 0.2%|
+          |K  : 1.010E-16+- 4.6% |K  : 7.858E-19+- 0.4%|
+          |D/K: 9.881E-01+- 4.7% |D/K: 1.011E+00+- 0.4%|
+    3.5500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+    3.5500----------------------------------------------
+          |IRL 33 IZ  32 IX   1  |IRL212 IZ  32 IX   2 |
+          |T  : 1.010E-16+- 1.2% |T  : 7.945E-19+- 0.2%|
+          |T-S: 9.418E-17+- 1.2% |T-S: 7.398E-19+- 0.2%|
+          |K  : 1.033E-16+- 4.5% |K  : 7.862E-19+- 0.4%|
+          |D/K: 9.770E-01+- 4.7% |D/K: 1.011E+00+- 0.4%|
+    3.6000----------------------------------------------
+          |IRL 34 IZ  33 IX   1  |IRL213 IZ  33 IX   2 |
+          |T  : 1.013E-16+- 1.2% |T  : 7.931E-19+- 0.2%|
+          |T-S: 9.449E-17+- 1.2% |T-S: 7.384E-19+- 0.2%|
+          |K  : 9.823E-17+- 4.7% |K  : 7.890E-19+- 0.4%|
+          |D/K: 1.031E+00+- 4.9% |D/K: 1.005E+00+- 0.5%|
+    3.6500----------------------------------------------
+          |IRL 35 IZ  34 IX   1  |IRL214 IZ  34 IX   2 |
+          |T  : 1.014E-16+- 1.2% |T  : 7.919E-19+- 0.2%|
+          |T-S: 9.464E-17+- 1.2% |T-S: 7.373E-19+- 0.2%|
+          |K  : 1.015E-16+- 4.5% |K  : 7.903E-19+- 0.5%|
+          |D/K: 9.990E-01+- 4.7% |D/K: 1.002E+00+- 0.5%|
+    3.7000----------------------------------------------
+          |IRL 36 IZ  35 IX   1  |IRL215 IZ  35 IX   2 |
+          |T  : 9.882E-17+- 1.2% |T  : 7.911E-19+- 0.2%|
+          |T-S: 9.220E-17+- 1.2% |T-S: 7.366E-19+- 0.2%|
+          |K  : 8.767E-17+- 4.7% |K  : 7.826E-19+- 0.4%|
+          |D/K: 1.127E+00+- 4.9% |D/K: 1.011E+00+- 0.4%|
+    3.7500----------------------------------------------
+          |IRL 37 IZ  36 IX   1  |IRL216 IZ  36 IX   2 |
+          |T  : 1.014E-16+- 1.2% |T  : 7.911E-19+- 0.2%|
+          |T-S: 9.454E-17+- 1.2% |T-S: 7.365E-19+- 0.2%|
+          |K  : 1.002E-16+- 4.7% |K  : 7.945E-19+- 0.5%|
+          |D/K: 1.011E+00+- 4.8% |D/K: 9.957E-01+- 0.5%|
+    3.8000----------------------------------------------
+          |IRL 38 IZ  37 IX   1  |IRL217 IZ  37 IX   2 |
+          |T  : 1.009E-16+- 1.2% |T  : 7.926E-19+- 0.2%|
+          |T-S: 9.410E-17+- 1.2% |T-S: 7.380E-19+- 0.2%|
+          |K  : 9.906E-17+- 4.6% |K  : 7.856E-19+- 0.4%|
+          |D/K: 1.018E+00+- 4.8% |D/K: 1.009E+00+- 0.5%|
+    3.8500----------------------------------------------
+          |IRL 39 IZ  38 IX   1  |IRL218 IZ  38 IX   2 |
+          |T  : 1.024E-16+- 1.2% |T  : 7.934E-19+- 0.2%|
+          |T-S: 9.553E-17+- 1.2% |T-S: 7.388E-19+- 0.2%|
+          |K  : 1.015E-16+- 4.5% |K  : 7.868E-19+- 0.5%|
+          |D/K: 1.009E+00+- 4.7% |D/K: 1.008E+00+- 0.5%|
+    3.9000----------------------------------------------
+          |IRL 40 IZ  39 IX   1  |IRL219 IZ  39 IX   2 |
+          |T  : 1.012E-16+- 1.2% |T  : 7.977E-19+- 0.2%|
+          |T-S: 9.433E-17+- 1.2% |T-S: 7.427E-19+- 0.2%|
+          |K  : 1.034E-16+- 4.7% |K  : 7.898E-19+- 0.5%|
+          |D/K: 9.783E-01+- 4.9% |D/K: 1.010E+00+- 0.5%|
+    3.9500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+    3.9500----------------------------------------------
+          |IRL 41 IZ  40 IX   1  |IRL220 IZ  40 IX   2 |
+          |T  : 1.047E-16+- 1.2% |T  : 8.115E-19+- 0.2%|
+          |T-S: 9.764E-17+- 1.2% |T-S: 7.555E-19+- 0.2%|
+          |K  : 1.042E-16+- 4.7% |K  : 7.783E-19+- 0.4%|
+          |D/K: 1.005E+00+- 4.8% |D/K: 1.043E+00+- 0.4%|
+    4.0000----------------------------------------------
+          |IRL 42 IZ  41 IX   1  |IRL221 IZ  41 IX   2 |
+          |T  : 9.680E-17+- 0.8% |T  : 7.746E-19+- 0.1%|
+          |T-S: 8.989E-17+- 0.8% |T-S: 7.179E-19+- 0.1%|
+          |K  : 9.561E-17+- 2.1% |K  : 7.645E-19+- 0.2%|
+          |D/K: 1.012E+00+- 2.2% |D/K: 1.013E+00+- 0.2%|
+    4.1500----------------------------------------------
+          |IRL 43 IZ  42 IX   1  |IRL222 IZ  42 IX   2 |
+          |T  : 9.563E-17+- 0.8% |T  : 7.658E-19+- 0.1%|
+          |T-S: 8.880E-17+- 0.8% |T-S: 7.097E-19+- 0.1%|
+          |K  : 9.411E-17+- 2.1% |K  : 7.632E-19+- 0.2%|
+          |D/K: 1.016E+00+- 2.2% |D/K: 1.003E+00+- 0.2%|
+    4.3000----------------------------------------------
+          |IRL 44 IZ  43 IX   1  |IRL223 IZ  43 IX   2 |
+          |T  : 9.338E-17+- 0.8% |T  : 7.589E-19+- 0.1%|
+          |T-S: 8.672E-17+- 0.8% |T-S: 7.032E-19+- 0.1%|
+          |K  : 9.443E-17+- 2.1% |K  : 7.573E-19+- 0.2%|
+          |D/K: 9.889E-01+- 2.2% |D/K: 1.002E+00+- 0.2%|
+    4.4500----------------------------------------------
+          |IRL 45 IZ  44 IX   1  |IRL224 IZ  44 IX   2 |
+          |T  : 9.221E-17+- 0.8% |T  : 7.533E-19+- 0.1%|
+          |T-S: 8.562E-17+- 0.8% |T-S: 6.980E-19+- 0.1%|
+          |K  : 9.163E-17+- 2.1% |K  : 7.547E-19+- 0.2%|
+          |D/K: 1.006E+00+- 2.2% |D/K: 9.982E-01+- 0.3%|
+    4.6000----------------------------------------------
+          |IRL 46 IZ  45 IX   1  |IRL225 IZ  45 IX   2 |
+          |T  : 9.130E-17+- 0.8% |T  : 7.493E-19+- 0.1%|
+          |T-S: 8.479E-17+- 0.8% |T-S: 6.943E-19+- 0.1%|
+          |K  : 9.037E-17+- 2.1% |K  : 7.474E-19+- 0.2%|
+          |D/K: 1.010E+00+- 2.2% |D/K: 1.003E+00+- 0.2%|
+    4.7500----------------------------------------------
+          |IRL 47 IZ  46 IX   1  |IRL226 IZ  46 IX   2 |
+          |T  : 8.937E-17+- 0.8% |T  : 7.440E-19+- 0.1%|
+          |T-S: 8.300E-17+- 0.8% |T-S: 6.893E-19+- 0.1%|
+          |K  : 8.837E-17+- 2.1% |K  : 7.419E-19+- 0.2%|
+          |D/K: 1.011E+00+- 2.3% |D/K: 1.003E+00+- 0.2%|
+    4.9000----------------------------------------------
+          |IRL 48 IZ  47 IX   1  |IRL227 IZ  47 IX   2 |
+          |T  : 8.816E-17+- 0.8% |T  : 7.388E-19+- 0.1%|
+          |T-S: 8.189E-17+- 0.8% |T-S: 6.845E-19+- 0.1%|
+          |K  : 8.955E-17+- 2.1% |K  : 7.406E-19+- 0.2%|
+          |D/K: 9.845E-01+- 2.3% |D/K: 9.976E-01+- 0.3%|
+    5.0500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+    5.0500----------------------------------------------
+          |IRL 49 IZ  48 IX   1  |IRL228 IZ  48 IX   2 |
+          |T  : 8.742E-17+- 0.8% |T  : 7.351E-19+- 0.1%|
+          |T-S: 8.118E-17+- 0.8% |T-S: 6.810E-19+- 0.1%|
+          |K  : 8.491E-17+- 2.1% |K  : 7.381E-19+- 0.2%|
+          |D/K: 1.030E+00+- 2.3% |D/K: 9.959E-01+- 0.3%|
+    5.2000----------------------------------------------
+          |IRL 50 IZ  49 IX   1  |IRL229 IZ  49 IX   2 |
+          |T  : 8.637E-17+- 0.8% |T  : 7.316E-19+- 0.1%|
+          |T-S: 8.021E-17+- 0.8% |T-S: 6.778E-19+- 0.1%|
+          |K  : 8.787E-17+- 2.2% |K  : 7.301E-19+- 0.2%|
+          |D/K: 9.828E-01+- 2.3% |D/K: 1.002E+00+- 0.2%|
+    5.3500----------------------------------------------
+          |IRL 51 IZ  50 IX   1  |IRL230 IZ  50 IX   2 |
+          |T  : 8.478E-17+- 0.8% |T  : 7.278E-19+- 0.2%|
+          |T-S: 7.873E-17+- 0.8% |T-S: 6.742E-19+- 0.2%|
+          |K  : 8.348E-17+- 2.2% |K  : 7.266E-19+- 0.2%|
+          |D/K: 1.016E+00+- 2.3% |D/K: 1.002E+00+- 0.3%|
+    5.5000----------------------------------------------
+          |IRL 52 IZ  51 IX   1  |IRL231 IZ  51 IX   2 |
+          |T  : 8.356E-17+- 0.8% |T  : 7.219E-19+- 0.1%|
+          |T-S: 7.761E-17+- 0.8% |T-S: 6.688E-19+- 0.1%|
+          |K  : 8.227E-17+- 2.2% |K  : 7.203E-19+- 0.2%|
+          |D/K: 1.016E+00+- 2.3% |D/K: 1.002E+00+- 0.2%|
+    5.6500----------------------------------------------
+          |IRL 53 IZ  52 IX   1  |IRL232 IZ  52 IX   2 |
+          |T  : 8.254E-17+- 0.8% |T  : 7.173E-19+- 0.2%|
+          |T-S: 7.667E-17+- 0.8% |T-S: 6.645E-19+- 0.2%|
+          |K  : 7.916E-17+- 2.3% |K  : 7.176E-19+- 0.2%|
+          |D/K: 1.043E+00+- 2.4% |D/K: 9.997E-01+- 0.3%|
+    5.8000----------------------------------------------
+          |IRL 54 IZ  53 IX   1  |IRL233 IZ  53 IX   2 |
+          |T  : 8.242E-17+- 0.8% |T  : 7.109E-19+- 0.1%|
+          |T-S: 7.655E-17+- 0.8% |T-S: 6.585E-19+- 0.1%|
+          |K  : 8.405E-17+- 2.2% |K  : 7.081E-19+- 0.2%|
+          |D/K: 9.806E-01+- 2.4% |D/K: 1.004E+00+- 0.2%|
+    5.9500----------------------------------------------
+          |IRL 55 IZ  54 IX   1  |IRL234 IZ  54 IX   2 |
+          |T  : 8.052E-17+- 0.8% |T  : 7.061E-19+- 0.1%|
+          |T-S: 7.478E-17+- 0.8% |T-S: 6.541E-19+- 0.1%|
+          |K  : 8.077E-17+- 2.3% |K  : 7.074E-19+- 0.2%|
+          |D/K: 9.970E-01+- 2.4% |D/K: 9.982E-01+- 0.3%|
+    6.1000----------------------------------------------
+          |IRL 56 IZ  55 IX   1  |IRL235 IZ  55 IX   2 |
+          |T  : 7.924E-17+- 0.8% |T  : 7.000E-19+- 0.1%|
+          |T-S: 7.360E-17+- 0.8% |T-S: 6.484E-19+- 0.1%|
+          |K  : 7.817E-17+- 2.3% |K  : 7.040E-19+- 0.2%|
+          |D/K: 1.014E+00+- 2.5% |D/K: 9.943E-01+- 0.2%|
+    6.2500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+    6.2500----------------------------------------------
+          |IRL 57 IZ  56 IX   1  |IRL236 IZ  56 IX   2 |
+          |T  : 7.786E-17+- 0.8% |T  : 6.984E-19+- 0.2%|
+          |T-S: 7.231E-17+- 0.8% |T-S: 6.469E-19+- 0.2%|
+          |K  : 7.859E-17+- 2.3% |K  : 6.968E-19+- 0.2%|
+          |D/K: 9.908E-01+- 2.5% |D/K: 1.002E+00+- 0.2%|
+    6.4000----------------------------------------------
+          |IRL 58 IZ  57 IX   1  |IRL237 IZ  57 IX   2 |
+          |T  : 7.738E-17+- 0.8% |T  : 6.923E-19+- 0.1%|
+          |T-S: 7.187E-17+- 0.8% |T-S: 6.413E-19+- 0.1%|
+          |K  : 7.667E-17+- 2.3% |K  : 6.943E-19+- 0.2%|
+          |D/K: 1.009E+00+- 2.4% |D/K: 9.972E-01+- 0.3%|
+    6.5500----------------------------------------------
+          |IRL 59 IZ  58 IX   1  |IRL238 IZ  58 IX   2 |
+          |T  : 7.608E-17+- 0.9% |T  : 6.882E-19+- 0.2%|
+          |T-S: 7.065E-17+- 0.8% |T-S: 6.375E-19+- 0.2%|
+          |K  : 7.528E-17+- 2.3% |K  : 6.861E-19+- 0.2%|
+          |D/K: 1.011E+00+- 2.5% |D/K: 1.003E+00+- 0.2%|
+    6.7000----------------------------------------------
+          |IRL 60 IZ  59 IX   1  |IRL239 IZ  59 IX   2 |
+          |T  : 7.556E-17+- 0.9% |T  : 6.825E-19+- 0.1%|
+          |T-S: 7.019E-17+- 0.9% |T-S: 6.321E-19+- 0.1%|
+          |K  : 7.202E-17+- 2.4% |K  : 6.827E-19+- 0.2%|
+          |D/K: 1.049E+00+- 2.5% |D/K: 9.998E-01+- 0.3%|
+    6.8500----------------------------------------------
+          |IRL 61 IZ  60 IX   1  |IRL240 IZ  60 IX   2 |
+          |T  : 7.331E-17+- 0.9% |T  : 6.776E-19+- 0.1%|
+          |T-S: 6.808E-17+- 0.9% |T-S: 6.275E-19+- 0.1%|
+          |K  : 7.342E-17+- 2.4% |K  : 6.767E-19+- 0.2%|
+          |D/K: 9.985E-01+- 2.5% |D/K: 1.001E+00+- 0.3%|
+    7.0000----------------------------------------------
+          |IRL 62 IZ  61 IX   1  |IRL241 IZ  61 IX   2 |
+          |T  : 7.187E-17+- 0.9% |T  : 6.729E-19+- 0.1%|
+          |T-S: 6.675E-17+- 0.9% |T-S: 6.232E-19+- 0.1%|
+          |K  : 7.218E-17+- 2.4% |K  : 6.731E-19+- 0.2%|
+          |D/K: 9.957E-01+- 2.6% |D/K: 9.998E-01+- 0.3%|
+    7.1500----------------------------------------------
+          |IRL 63 IZ  62 IX   1  |IRL242 IZ  62 IX   2 |
+          |T  : 7.172E-17+- 0.9% |T  : 6.671E-19+- 0.1%|
+          |T-S: 6.661E-17+- 0.9% |T-S: 6.178E-19+- 0.1%|
+          |K  : 7.321E-17+- 2.4% |K  : 6.656E-19+- 0.2%|
+          |D/K: 9.796E-01+- 2.5% |D/K: 1.002E+00+- 0.2%|
+    7.3000----------------------------------------------
+          |IRL 64 IZ  63 IX   1  |IRL243 IZ  63 IX   2 |
+          |T  : 7.196E-17+- 0.9% |T  : 6.629E-19+- 0.2%|
+          |T-S: 6.685E-17+- 0.9% |T-S: 6.139E-19+- 0.2%|
+          |K  : 7.247E-17+- 2.4% |K  : 6.628E-19+- 0.2%|
+          |D/K: 9.930E-01+- 2.6% |D/K: 1.000E+00+- 0.3%|
+    7.4500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+    7.4500----------------------------------------------
+          |IRL 65 IZ  64 IX   1  |IRL244 IZ  64 IX   2 |
+          |T  : 6.953E-17+- 0.9% |T  : 6.568E-19+- 0.1%|
+          |T-S: 6.459E-17+- 0.9% |T-S: 6.082E-19+- 0.1%|
+          |K  : 7.012E-17+- 2.4% |K  : 6.580E-19+- 0.2%|
+          |D/K: 9.917E-01+- 2.6% |D/K: 9.981E-01+- 0.2%|
+    7.6000----------------------------------------------
+          |IRL 66 IZ  65 IX   1  |IRL245 IZ  65 IX   2 |
+          |T  : 6.817E-17+- 0.9% |T  : 6.524E-19+- 0.1%|
+          |T-S: 6.333E-17+- 0.9% |T-S: 6.042E-19+- 0.1%|
+          |K  : 6.806E-17+- 2.5% |K  : 6.560E-19+- 0.2%|
+          |D/K: 1.002E+00+- 2.6% |D/K: 9.945E-01+- 0.3%|
+    7.7500----------------------------------------------
+          |IRL 67 IZ  66 IX   1  |IRL246 IZ  66 IX   2 |
+          |T  : 6.871E-17+- 0.9% |T  : 6.498E-19+- 0.2%|
+          |T-S: 6.383E-17+- 0.9% |T-S: 6.017E-19+- 0.2%|
+          |K  : 6.445E-17+- 2.5% |K  : 6.472E-19+- 0.2%|
+          |D/K: 1.066E+00+- 2.6% |D/K: 1.004E+00+- 0.3%|
+    7.9000----------------------------------------------
+          |IRL 68 IZ  67 IX   1  |IRL247 IZ  67 IX   2 |
+          |T  : 6.625E-17+- 0.9% |T  : 6.436E-19+- 0.2%|
+          |T-S: 6.154E-17+- 0.9% |T-S: 5.960E-19+- 0.2%|
+          |K  : 6.694E-17+- 2.5% |K  : 6.445E-19+- 0.2%|
+          |D/K: 9.898E-01+- 2.7% |D/K: 9.986E-01+- 0.3%|
+    8.0500----------------------------------------------
+          |IRL 69 IZ  68 IX   1  |IRL248 IZ  68 IX   2 |
+          |T  : 6.465E-17+- 0.9% |T  : 6.387E-19+- 0.2%|
+          |T-S: 6.006E-17+- 0.9% |T-S: 5.914E-19+- 0.2%|
+          |K  : 6.595E-17+- 2.5% |K  : 6.374E-19+- 0.2%|
+          |D/K: 9.803E-01+- 2.7% |D/K: 1.002E+00+- 0.2%|
+    8.2000----------------------------------------------
+          |IRL 70 IZ  69 IX   1  |IRL249 IZ  69 IX   2 |
+          |T  : 6.422E-17+- 0.9% |T  : 6.331E-19+- 0.1%|
+          |T-S: 5.965E-17+- 0.9% |T-S: 5.863E-19+- 0.1%|
+          |K  : 6.292E-17+- 2.5% |K  : 6.346E-19+- 0.2%|
+          |D/K: 1.021E+00+- 2.7% |D/K: 9.977E-01+- 0.3%|
+    8.3500----------------------------------------------
+          |IRL 71 IZ  70 IX   1  |IRL250 IZ  70 IX   2 |
+          |T  : 6.413E-17+- 0.9% |T  : 6.281E-19+- 0.2%|
+          |T-S: 5.956E-17+- 0.9% |T-S: 5.817E-19+- 0.2%|
+          |K  : 6.035E-17+- 2.6% |K  : 6.257E-19+- 0.2%|
+          |D/K: 1.063E+00+- 2.8% |D/K: 1.004E+00+- 0.2%|
+    8.5000----------------------------------------------
+          |IRL 72 IZ  71 IX   1  |IRL251 IZ  71 IX   2 |
+          |T  : 6.232E-17+- 0.9% |T  : 6.221E-19+- 0.1%|
+          |T-S: 5.791E-17+- 0.9% |T-S: 5.760E-19+- 0.1%|
+          |K  : 5.970E-17+- 2.6% |K  : 6.236E-19+- 0.2%|
+          |D/K: 1.044E+00+- 2.8% |D/K: 9.976E-01+- 0.3%|
+    8.6500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+    8.6500----------------------------------------------
+          |IRL 73 IZ  72 IX   1  |IRL252 IZ  72 IX   2 |
+          |T  : 6.063E-17+- 1.0% |T  : 6.191E-19+- 0.1%|
+          |T-S: 5.632E-17+- 1.0% |T-S: 5.733E-19+- 0.2%|
+          |K  : 6.071E-17+- 2.6% |K  : 6.187E-19+- 0.2%|
+          |D/K: 9.986E-01+- 2.8% |D/K: 1.001E+00+- 0.2%|
+    8.8000----------------------------------------------
+          |IRL 74 IZ  73 IX   1  |IRL253 IZ  73 IX   2 |
+          |T  : 5.981E-17+- 1.0% |T  : 6.139E-19+- 0.2%|
+          |T-S: 5.556E-17+- 1.0% |T-S: 5.685E-19+- 0.2%|
+          |K  : 5.713E-17+- 2.6% |K  : 6.125E-19+- 0.2%|
+          |D/K: 1.047E+00+- 2.8% |D/K: 1.002E+00+- 0.3%|
+    8.9500----------------------------------------------
+          |IRL 75 IZ  74 IX   1  |IRL254 IZ  74 IX   2 |
+          |T  : 5.984E-17+- 1.0% |T  : 6.079E-19+- 0.1%|
+          |T-S: 5.559E-17+- 1.0% |T-S: 5.629E-19+- 0.1%|
+          |K  : 5.868E-17+- 2.7% |K  : 6.083E-19+- 0.2%|
+          |D/K: 1.020E+00+- 2.8% |D/K: 9.994E-01+- 0.3%|
+    9.1000----------------------------------------------
+          |IRL 76 IZ  75 IX   1  |IRL255 IZ  75 IX   2 |
+          |T  : 5.865E-17+- 1.0% |T  : 6.026E-19+- 0.1%|
+          |T-S: 5.449E-17+- 1.0% |T-S: 5.579E-19+- 0.1%|
+          |K  : 5.936E-17+- 2.7% |K  : 6.053E-19+- 0.2%|
+          |D/K: 9.879E-01+- 2.9% |D/K: 9.955E-01+- 0.2%|
+    9.2500----------------------------------------------
+          |IRL 77 IZ  76 IX   1  |IRL256 IZ  76 IX   2 |
+          |T  : 5.893E-17+- 1.0% |T  : 5.997E-19+- 0.2%|
+          |T-S: 5.475E-17+- 1.0% |T-S: 5.553E-19+- 0.2%|
+          |K  : 5.705E-17+- 2.7% |K  : 5.999E-19+- 0.2%|
+          |D/K: 1.033E+00+- 2.9% |D/K: 9.996E-01+- 0.3%|
+    9.4000----------------------------------------------
+          |IRL 78 IZ  77 IX   1  |IRL257 IZ  77 IX   2 |
+          |T  : 5.855E-17+- 1.0% |T  : 5.942E-19+- 0.2%|
+          |T-S: 5.438E-17+- 1.0% |T-S: 5.502E-19+- 0.2%|
+          |K  : 5.846E-17+- 2.7% |K  : 5.933E-19+- 0.2%|
+          |D/K: 1.002E+00+- 2.9% |D/K: 1.002E+00+- 0.3%|
+    9.5500----------------------------------------------
+          |IRL 79 IZ  78 IX   1  |IRL258 IZ  78 IX   2 |
+          |T  : 5.669E-17+- 1.0% |T  : 5.903E-19+- 0.2%|
+          |T-S: 5.267E-17+- 1.0% |T-S: 5.466E-19+- 0.2%|
+          |K  : 5.252E-17+- 2.8% |K  : 5.916E-19+- 0.2%|
+          |D/K: 1.079E+00+- 3.0% |D/K: 9.979E-01+- 0.3%|
+    9.7000----------------------------------------------
+          |IRL 80 IZ  79 IX   1  |IRL259 IZ  79 IX   2 |
+          |T  : 5.534E-17+- 1.0% |T  : 5.860E-19+- 0.2%|
+          |T-S: 5.142E-17+- 1.0% |T-S: 5.425E-19+- 0.2%|
+          |K  : 5.634E-17+- 2.7% |K  : 5.882E-19+- 0.2%|
+          |D/K: 9.822E-01+- 2.9% |D/K: 9.963E-01+- 0.3%|
+    9.8500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+    9.8500----------------------------------------------
+          |IRL 81 IZ  80 IX   1  |IRL260 IZ  80 IX   2 |
+          |T  : 5.395E-17+- 1.0% |T  : 5.750E-19+- 0.2%|
+          |T-S: 5.013E-17+- 1.0% |T-S: 5.323E-19+- 0.2%|
+          |K  : 5.342E-17+- 2.8% |K  : 5.800E-19+- 0.2%|
+          |D/K: 1.010E+00+- 3.0% |D/K: 9.915E-01+- 0.3%|
+   10.0000----------------------------------------------
+          |IRL 82 IZ  81 IX   1  |IRL261 IZ  81 IX   2 |
+          |T  : 5.507E-17+- 1.6% |T  : 5.753E-19+- 0.2%|
+          |T-S: 5.143E-17+- 1.6% |T-S: 5.353E-19+- 0.2%|
+          |K  : 5.360E-17+- 6.4% |K  : 5.864E-19+- 0.5%|
+          |D/K: 1.028E+00+- 6.6% |D/K: 9.810E-01+- 0.6%|
+   10.0500----------------------------------------------
+          |IRL 83 IZ  82 IX   1  |IRL262 IZ  82 IX   2 |
+          |T  : 5.391E-17+- 1.6% |T  : 5.752E-19+- 0.2%|
+          |T-S: 5.031E-17+- 1.6% |T-S: 5.352E-19+- 0.2%|
+          |K  : 5.343E-17+- 6.5% |K  : 5.787E-19+- 0.4%|
+          |D/K: 1.009E+00+- 6.7% |D/K: 9.939E-01+- 0.5%|
+   10.1000----------------------------------------------
+          |IRL 84 IZ  83 IX   1  |IRL263 IZ  83 IX   2 |
+          |T  : 5.457E-17+- 1.6% |T  : 5.762E-19+- 0.2%|
+          |T-S: 5.091E-17+- 1.6% |T-S: 5.361E-19+- 0.2%|
+          |K  : 5.894E-17+- 6.2% |K  : 5.789E-19+- 0.4%|
+          |D/K: 9.259E-01+- 6.4% |D/K: 9.953E-01+- 0.5%|
+   10.1500----------------------------------------------
+          |IRL 85 IZ  84 IX   1  |IRL264 IZ  84 IX   2 |
+          |T  : 5.375E-17+- 1.6% |T  : 5.749E-19+- 0.2%|
+          |T-S: 5.017E-17+- 1.6% |T-S: 5.348E-19+- 0.2%|
+          |K  : 5.592E-17+- 6.3% |K  : 5.791E-19+- 0.5%|
+          |D/K: 9.611E-01+- 6.5% |D/K: 9.928E-01+- 0.5%|
+   10.2000----------------------------------------------
+          |IRL 86 IZ  85 IX   1  |IRL265 IZ  85 IX   2 |
+          |T  : 5.417E-17+- 1.6% |T  : 5.753E-19+- 0.2%|
+          |T-S: 5.055E-17+- 1.6% |T-S: 5.352E-19+- 0.2%|
+          |K  : 5.460E-17+- 6.6% |K  : 5.805E-19+- 0.5%|
+          |D/K: 9.923E-01+- 6.8% |D/K: 9.911E-01+- 0.5%|
+   10.2500----------------------------------------------
+          |IRL 87 IZ  86 IX   1  |IRL266 IZ  86 IX   2 |
+          |T  : 5.483E-17+- 1.6% |T  : 5.754E-19+- 0.2%|
+          |T-S: 5.121E-17+- 1.6% |T-S: 5.353E-19+- 0.2%|
+          |K  : 5.793E-17+- 6.3% |K  : 5.782E-19+- 0.5%|
+          |D/K: 9.465E-01+- 6.5% |D/K: 9.951E-01+- 0.5%|
+   10.3000----------------------------------------------
+          |IRL 88 IZ  87 IX   1  |IRL267 IZ  87 IX   2 |
+          |T  : 5.481E-17+- 1.6% |T  : 5.759E-19+- 0.2%|
+          |T-S: 5.120E-17+- 1.6% |T-S: 5.358E-19+- 0.2%|
+          |K  : 5.473E-17+- 6.5% |K  : 5.761E-19+- 0.4%|
+          |D/K: 1.001E+00+- 6.7% |D/K: 9.996E-01+- 0.5%|
+   10.3500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   10.3500----------------------------------------------
+          |IRL 89 IZ  88 IX   1  |IRL268 IZ  88 IX   2 |
+          |T  : 5.419E-17+- 1.6% |T  : 5.752E-19+- 0.2%|
+          |T-S: 5.055E-17+- 1.6% |T-S: 5.351E-19+- 0.2%|
+          |K  : 5.237E-17+- 6.4% |K  : 5.743E-19+- 0.4%|
+          |D/K: 1.035E+00+- 6.6% |D/K: 1.002E+00+- 0.5%|
+   10.4000----------------------------------------------
+          |IRL 90 IZ  89 IX   1  |IRL269 IZ  89 IX   2 |
+          |T  : 5.450E-17+- 1.6% |T  : 5.742E-19+- 0.2%|
+          |T-S: 5.086E-17+- 1.6% |T-S: 5.342E-19+- 0.2%|
+          |K  : 5.009E-17+- 6.8% |K  : 5.750E-19+- 0.5%|
+          |D/K: 1.088E+00+- 7.0% |D/K: 9.987E-01+- 0.5%|
+   10.4500----------------------------------------------
+          |IRL 91 IZ  90 IX   1  |IRL270 IZ  90 IX   2 |
+          |T  : 5.347E-17+- 1.6% |T  : 5.729E-19+- 0.2%|
+          |T-S: 4.987E-17+- 1.6% |T-S: 5.329E-19+- 0.2%|
+          |K  : 5.752E-17+- 6.7% |K  : 5.685E-19+- 0.3%|
+          |D/K: 9.296E-01+- 6.8% |D/K: 1.008E+00+- 0.4%|
+   10.5000----------------------------------------------
+          |IRL 92 IZ  91 IX   1  |IRL271 IZ  91 IX   2 |
+          |T  : 5.382E-17+- 1.6% |T  : 5.719E-19+- 0.2%|
+          |T-S: 5.023E-17+- 1.6% |T-S: 5.320E-19+- 0.2%|
+          |K  : 5.181E-17+- 6.4% |K  : 5.749E-19+- 0.5%|
+          |D/K: 1.039E+00+- 6.6% |D/K: 9.948E-01+- 0.6%|
+   10.5500----------------------------------------------
+          |IRL 93 IZ  92 IX   1  |IRL272 IZ  92 IX   2 |
+          |T  : 5.409E-17+- 1.6% |T  : 5.721E-19+- 0.2%|
+          |T-S: 5.048E-17+- 1.6% |T-S: 5.323E-19+- 0.2%|
+          |K  : 5.398E-17+- 6.5% |K  : 5.702E-19+- 0.5%|
+          |D/K: 1.002E+00+- 6.7% |D/K: 1.003E+00+- 0.5%|
+   10.6000----------------------------------------------
+          |IRL 94 IZ  93 IX   1  |IRL273 IZ  93 IX   2 |
+          |T  : 5.194E-17+- 1.6% |T  : 5.703E-19+- 0.2%|
+          |T-S: 4.847E-17+- 1.6% |T-S: 5.305E-19+- 0.2%|
+          |K  : 4.976E-17+- 6.9% |K  : 5.682E-19+- 0.5%|
+          |D/K: 1.044E+00+- 7.0% |D/K: 1.004E+00+- 0.5%|
+   10.6500----------------------------------------------
+          |IRL 95 IZ  94 IX   1  |IRL274 IZ  94 IX   2 |
+          |T  : 5.138E-17+- 1.6% |T  : 5.685E-19+- 0.2%|
+          |T-S: 4.798E-17+- 1.6% |T-S: 5.289E-19+- 0.2%|
+          |K  : 5.246E-17+- 6.4% |K  : 5.709E-19+- 0.5%|
+          |D/K: 9.794E-01+- 6.6% |D/K: 9.958E-01+- 0.5%|
+   10.7000----------------------------------------------
+          |IRL 96 IZ  95 IX   1  |IRL275 IZ  95 IX   2 |
+          |T  : 5.162E-17+- 1.6% |T  : 5.683E-19+- 0.2%|
+          |T-S: 4.815E-17+- 1.6% |T-S: 5.287E-19+- 0.2%|
+          |K  : 5.484E-17+- 6.8% |K  : 5.665E-19+- 0.5%|
+          |D/K: 9.413E-01+- 7.0% |D/K: 1.003E+00+- 0.5%|
+   10.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   10.7500----------------------------------------------
+          |IRL 97 IZ  96 IX   1  |IRL276 IZ  96 IX   2 |
+          |T  : 5.149E-17+- 1.6% |T  : 5.665E-19+- 0.2%|
+          |T-S: 4.807E-17+- 1.6% |T-S: 5.270E-19+- 0.2%|
+          |K  : 4.747E-17+- 7.0% |K  : 5.732E-19+- 0.6%|
+          |D/K: 1.085E+00+- 7.2% |D/K: 9.883E-01+- 0.6%|
+   10.8000----------------------------------------------
+          |IRL 98 IZ  97 IX   1  |IRL277 IZ  97 IX   2 |
+          |T  : 5.298E-17+- 1.6% |T  : 5.668E-19+- 0.2%|
+          |T-S: 4.941E-17+- 1.6% |T-S: 5.273E-19+- 0.2%|
+          |K  : 4.880E-17+- 6.6% |K  : 5.614E-19+- 0.4%|
+          |D/K: 1.086E+00+- 6.8% |D/K: 1.010E+00+- 0.4%|
+   10.8500----------------------------------------------
+          |IRL 99 IZ  98 IX   1  |IRL278 IZ  98 IX   2 |
+          |T  : 5.235E-17+- 1.6% |T  : 5.665E-19+- 0.2%|
+          |T-S: 4.885E-17+- 1.6% |T-S: 5.270E-19+- 0.2%|
+          |K  : 4.536E-17+- 6.9% |K  : 5.671E-19+- 0.5%|
+          |D/K: 1.154E+00+- 7.1% |D/K: 9.989E-01+- 0.6%|
+   10.9000----------------------------------------------
+          |IRL100 IZ  99 IX   1  |IRL279 IZ  99 IX   2 |
+          |T  : 5.114E-17+- 1.7% |T  : 5.643E-19+- 0.2%|
+          |T-S: 4.771E-17+- 1.6% |T-S: 5.250E-19+- 0.2%|
+          |K  : 5.194E-17+- 6.6% |K  : 5.617E-19+- 0.5%|
+          |D/K: 9.845E-01+- 6.8% |D/K: 1.005E+00+- 0.5%|
+   10.9500----------------------------------------------
+          |IRL101 IZ 100 IX   1  |IRL280 IZ 100 IX   2 |
+          |T  : 5.021E-17+- 1.7% |T  : 5.635E-19+- 0.2%|
+          |T-S: 4.688E-17+- 1.6% |T-S: 5.242E-19+- 0.2%|
+          |K  : 4.794E-17+- 7.1% |K  : 5.636E-19+- 0.5%|
+          |D/K: 1.048E+00+- 7.3% |D/K: 9.998E-01+- 0.5%|
+   11.0000----------------------------------------------
+          |IRL102 IZ 101 IX   1  |IRL281 IZ 101 IX   2 |
+          |T  : 5.112E-17+- 0.9% |T  : 5.621E-19+- 0.2%|
+          |T-S: 4.772E-17+- 0.9% |T-S: 5.229E-19+- 0.2%|
+          |K  : 5.169E-17+- 3.1% |K  : 5.612E-19+- 0.2%|
+          |D/K: 9.888E-01+- 3.2% |D/K: 1.002E+00+- 0.3%|
+   11.2500----------------------------------------------
+          |IRL103 IZ 102 IX   1  |IRL282 IZ 102 IX   2 |
+          |T  : 5.043E-17+- 0.9% |T  : 5.571E-19+- 0.2%|
+          |T-S: 4.707E-17+- 0.9% |T-S: 5.183E-19+- 0.2%|
+          |K  : 5.032E-17+- 3.1% |K  : 5.555E-19+- 0.2%|
+          |D/K: 1.002E+00+- 3.3% |D/K: 1.003E+00+- 0.3%|
+   11.5000----------------------------------------------
+          |IRL104 IZ 103 IX   1  |IRL283 IZ 103 IX   2 |
+          |T  : 4.977E-17+- 0.9% |T  : 5.519E-19+- 0.1%|
+          |T-S: 4.645E-17+- 0.9% |T-S: 5.135E-19+- 0.1%|
+          |K  : 4.998E-17+- 3.1% |K  : 5.512E-19+- 0.2%|
+          |D/K: 9.957E-01+- 3.2% |D/K: 1.001E+00+- 0.3%|
+   11.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   11.7500----------------------------------------------
+          |IRL105 IZ 104 IX   1  |IRL284 IZ 104 IX   2 |
+          |T  : 4.815E-17+- 0.9% |T  : 5.475E-19+- 0.2%|
+          |T-S: 4.495E-17+- 0.9% |T-S: 5.093E-19+- 0.2%|
+          |K  : 4.880E-17+- 3.1% |K  : 5.456E-19+- 0.2%|
+          |D/K: 9.867E-01+- 3.2% |D/K: 1.003E+00+- 0.3%|
+   12.0000----------------------------------------------
+          |IRL106 IZ 105 IX   1  |IRL285 IZ 105 IX   2 |
+          |T  : 4.748E-17+- 0.9% |T  : 5.419E-19+- 0.1%|
+          |T-S: 4.431E-17+- 0.9% |T-S: 5.042E-19+- 0.1%|
+          |K  : 4.675E-17+- 3.2% |K  : 5.420E-19+- 0.2%|
+          |D/K: 1.016E+00+- 3.3% |D/K: 9.999E-01+- 0.3%|
+   12.2500----------------------------------------------
+          |IRL107 IZ 106 IX   1  |IRL286 IZ 106 IX   2 |
+          |T  : 4.694E-17+- 0.9% |T  : 5.379E-19+- 0.1%|
+          |T-S: 4.379E-17+- 0.9% |T-S: 5.004E-19+- 0.1%|
+          |K  : 4.926E-17+- 3.2% |K  : 5.375E-19+- 0.2%|
+          |D/K: 9.528E-01+- 3.3% |D/K: 1.001E+00+- 0.3%|
+   12.5000----------------------------------------------
+          |IRL108 IZ 107 IX   1  |IRL287 IZ 107 IX   2 |
+          |T  : 4.581E-17+- 1.0% |T  : 5.343E-19+- 0.2%|
+          |T-S: 4.276E-17+- 1.0% |T-S: 4.971E-19+- 0.2%|
+          |K  : 4.286E-17+- 3.3% |K  : 5.317E-19+- 0.2%|
+          |D/K: 1.069E+00+- 3.4% |D/K: 1.005E+00+- 0.3%|
+   12.7500----------------------------------------------
+          |IRL109 IZ 108 IX   1  |IRL288 IZ 108 IX   2 |
+          |T  : 4.555E-17+- 1.0% |T  : 5.292E-19+- 0.2%|
+          |T-S: 4.252E-17+- 1.0% |T-S: 4.923E-19+- 0.2%|
+          |K  : 4.570E-17+- 3.2% |K  : 5.260E-19+- 0.2%|
+          |D/K: 9.966E-01+- 3.4% |D/K: 1.006E+00+- 0.3%|
+   13.0000----------------------------------------------
+          |IRL110 IZ 109 IX   1  |IRL289 IZ 109 IX   2 |
+          |T  : 4.416E-17+- 1.0% |T  : 5.231E-19+- 0.1%|
+          |T-S: 4.122E-17+- 1.0% |T-S: 4.867E-19+- 0.1%|
+          |K  : 4.451E-17+- 3.3% |K  : 5.207E-19+- 0.2%|
+          |D/K: 9.922E-01+- 3.5% |D/K: 1.005E+00+- 0.3%|
+   13.2500----------------------------------------------
+          |IRL111 IZ 110 IX   1  |IRL290 IZ 110 IX   2 |
+          |T  : 4.404E-17+- 1.0% |T  : 5.191E-19+- 0.2%|
+          |T-S: 4.111E-17+- 1.0% |T-S: 4.829E-19+- 0.2%|
+          |K  : 4.393E-17+- 3.3% |K  : 5.178E-19+- 0.2%|
+          |D/K: 1.002E+00+- 3.5% |D/K: 1.003E+00+- 0.3%|
+   13.5000----------------------------------------------
+          |IRL112 IZ 111 IX   1  |IRL291 IZ 111 IX   2 |
+          |T  : 4.279E-17+- 1.0% |T  : 5.135E-19+- 0.1%|
+          |T-S: 3.994E-17+- 1.0% |T-S: 4.778E-19+- 0.1%|
+          |K  : 4.149E-17+- 3.4% |K  : 5.117E-19+- 0.2%|
+          |D/K: 1.031E+00+- 3.6% |D/K: 1.004E+00+- 0.3%|
+   13.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   13.7500----------------------------------------------
+          |IRL113 IZ 112 IX   1  |IRL292 IZ 112 IX   2 |
+          |T  : 4.273E-17+- 1.0% |T  : 5.084E-19+- 0.1%|
+          |T-S: 3.988E-17+- 1.0% |T-S: 4.730E-19+- 0.1%|
+          |K  : 4.105E-17+- 3.4% |K  : 5.081E-19+- 0.2%|
+          |D/K: 1.041E+00+- 3.5% |D/K: 1.000E+00+- 0.3%|
+   14.0000----------------------------------------------
+          |IRL114 IZ 113 IX   1  |IRL293 IZ 113 IX   2 |
+          |T  : 4.219E-17+- 1.0% |T  : 5.040E-19+- 0.1%|
+          |T-S: 3.939E-17+- 1.0% |T-S: 4.689E-19+- 0.1%|
+          |K  : 4.180E-17+- 3.4% |K  : 5.038E-19+- 0.2%|
+          |D/K: 1.009E+00+- 3.5% |D/K: 1.000E+00+- 0.3%|
+   14.2500----------------------------------------------
+          |IRL115 IZ 114 IX   1  |IRL294 IZ 114 IX   2 |
+          |T  : 4.064E-17+- 1.0% |T  : 4.997E-19+- 0.1%|
+          |T-S: 3.793E-17+- 1.0% |T-S: 4.649E-19+- 0.1%|
+          |K  : 3.896E-17+- 3.5% |K  : 4.991E-19+- 0.2%|
+          |D/K: 1.043E+00+- 3.6% |D/K: 1.001E+00+- 0.3%|
+   14.5000----------------------------------------------
+          |IRL116 IZ 115 IX   1  |IRL295 IZ 115 IX   2 |
+          |T  : 4.019E-17+- 1.0% |T  : 4.963E-19+- 0.2%|
+          |T-S: 3.751E-17+- 1.0% |T-S: 4.618E-19+- 0.2%|
+          |K  : 3.806E-17+- 3.6% |K  : 4.945E-19+- 0.2%|
+          |D/K: 1.056E+00+- 3.7% |D/K: 1.004E+00+- 0.3%|
+   14.7500----------------------------------------------
+          |IRL117 IZ 116 IX   1  |IRL296 IZ 116 IX   2 |
+          |T  : 3.952E-17+- 1.0% |T  : 4.914E-19+- 0.2%|
+          |T-S: 3.689E-17+- 1.0% |T-S: 4.572E-19+- 0.2%|
+          |K  : 3.997E-17+- 3.5% |K  : 4.893E-19+- 0.2%|
+          |D/K: 9.887E-01+- 3.7% |D/K: 1.004E+00+- 0.3%|
+   15.0000----------------------------------------------
+          |IRL118 IZ 117 IX   1  |IRL297 IZ 117 IX   2 |
+          |T  : 3.845E-17+- 1.0% |T  : 4.862E-19+- 0.2%|
+          |T-S: 3.590E-17+- 1.0% |T-S: 4.524E-19+- 0.2%|
+          |K  : 3.777E-17+- 3.7% |K  : 4.834E-19+- 0.2%|
+          |D/K: 1.018E+00+- 3.8% |D/K: 1.006E+00+- 0.3%|
+   15.2500----------------------------------------------
+          |IRL119 IZ 118 IX   1  |IRL298 IZ 118 IX   2 |
+          |T  : 3.803E-17+- 1.0% |T  : 4.809E-19+- 0.1%|
+          |T-S: 3.550E-17+- 1.0% |T-S: 4.474E-19+- 0.1%|
+          |K  : 3.658E-17+- 3.6% |K  : 4.797E-19+- 0.2%|
+          |D/K: 1.040E+00+- 3.8% |D/K: 1.002E+00+- 0.3%|
+   15.5000----------------------------------------------
+          |IRL120 IZ 119 IX   1  |IRL299 IZ 119 IX   2 |
+          |T  : 3.746E-17+- 1.0% |T  : 4.759E-19+- 0.1%|
+          |T-S: 3.497E-17+- 1.0% |T-S: 4.428E-19+- 0.1%|
+          |K  : 3.806E-17+- 3.6% |K  : 4.744E-19+- 0.2%|
+          |D/K: 9.843E-01+- 3.8% |D/K: 1.003E+00+- 0.3%|
+   15.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   15.7500----------------------------------------------
+          |IRL121 IZ 120 IX   1  |IRL300 IZ 120 IX   2 |
+          |T  : 3.679E-17+- 1.1% |T  : 4.712E-19+- 0.1%|
+          |T-S: 3.434E-17+- 1.1% |T-S: 4.384E-19+- 0.1%|
+          |K  : 3.452E-17+- 3.7% |K  : 4.704E-19+- 0.2%|
+          |D/K: 1.066E+00+- 3.8% |D/K: 1.002E+00+- 0.2%|
+   16.0000----------------------------------------------
+          |IRL122 IZ 121 IX   1  |IRL301 IZ 121 IX   2 |
+          |T  : 3.640E-17+- 1.1% |T  : 4.676E-19+- 0.1%|
+          |T-S: 3.397E-17+- 1.1% |T-S: 4.351E-19+- 0.1%|
+          |K  : 3.811E-17+- 3.6% |K  : 4.668E-19+- 0.2%|
+          |D/K: 9.550E-01+- 3.8% |D/K: 1.002E+00+- 0.3%|
+   16.2500----------------------------------------------
+          |IRL123 IZ 122 IX   1  |IRL302 IZ 122 IX   2 |
+          |T  : 3.616E-17+- 1.1% |T  : 4.636E-19+- 0.1%|
+          |T-S: 3.375E-17+- 1.1% |T-S: 4.313E-19+- 0.1%|
+          |K  : 3.588E-17+- 3.7% |K  : 4.621E-19+- 0.2%|
+          |D/K: 1.008E+00+- 3.8% |D/K: 1.003E+00+- 0.2%|
+   16.5000----------------------------------------------
+          |IRL124 IZ 123 IX   1  |IRL303 IZ 123 IX   2 |
+          |T  : 3.566E-17+- 1.1% |T  : 4.598E-19+- 0.1%|
+          |T-S: 3.329E-17+- 1.1% |T-S: 4.278E-19+- 0.1%|
+          |K  : 3.378E-17+- 3.8% |K  : 4.610E-19+- 0.2%|
+          |D/K: 1.055E+00+- 4.0% |D/K: 9.973E-01+- 0.3%|
+   16.7500----------------------------------------------
+          |IRL125 IZ 124 IX   1  |IRL304 IZ 124 IX   2 |
+          |T  : 3.461E-17+- 1.1% |T  : 4.555E-19+- 0.1%|
+          |T-S: 3.231E-17+- 1.1% |T-S: 4.238E-19+- 0.1%|
+          |K  : 3.292E-17+- 4.0% |K  : 4.538E-19+- 0.2%|
+          |D/K: 1.051E+00+- 4.1% |D/K: 1.004E+00+- 0.3%|
+   17.0000----------------------------------------------
+          |IRL126 IZ 125 IX   1  |IRL305 IZ 125 IX   2 |
+          |T  : 3.443E-17+- 1.1% |T  : 4.513E-19+- 0.1%|
+          |T-S: 3.213E-17+- 1.1% |T-S: 4.199E-19+- 0.1%|
+          |K  : 3.170E-17+- 3.9% |K  : 4.478E-19+- 0.2%|
+          |D/K: 1.086E+00+- 4.1% |D/K: 1.008E+00+- 0.2%|
+   17.2500----------------------------------------------
+          |IRL127 IZ 126 IX   1  |IRL306 IZ 126 IX   2 |
+          |T  : 3.370E-17+- 1.1% |T  : 4.465E-19+- 0.1%|
+          |T-S: 3.145E-17+- 1.1% |T-S: 4.154E-19+- 0.1%|
+          |K  : 3.501E-17+- 3.8% |K  : 4.447E-19+- 0.2%|
+          |D/K: 9.625E-01+- 3.9% |D/K: 1.004E+00+- 0.2%|
+   17.5000----------------------------------------------
+          |IRL128 IZ 127 IX   1  |IRL307 IZ 127 IX   2 |
+          |T  : 3.342E-17+- 1.1% |T  : 4.422E-19+- 0.1%|
+          |T-S: 3.120E-17+- 1.1% |T-S: 4.114E-19+- 0.1%|
+          |K  : 3.362E-17+- 3.9% |K  : 4.429E-19+- 0.3%|
+          |D/K: 9.940E-01+- 4.0% |D/K: 9.985E-01+- 0.3%|
+   17.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   17.7500----------------------------------------------
+          |IRL129 IZ 128 IX   1  |IRL308 IZ 128 IX   2 |
+          |T  : 3.259E-17+- 1.1% |T  : 4.386E-19+- 0.1%|
+          |T-S: 3.042E-17+- 1.1% |T-S: 4.081E-19+- 0.1%|
+          |K  : 3.137E-17+- 3.9% |K  : 4.375E-19+- 0.2%|
+          |D/K: 1.039E+00+- 4.1% |D/K: 1.002E+00+- 0.3%|
+   18.0000----------------------------------------------
+          |IRL130 IZ 129 IX   1  |IRL309 IZ 129 IX   2 |
+          |T  : 3.243E-17+- 1.1% |T  : 4.345E-19+- 0.1%|
+          |T-S: 3.027E-17+- 1.1% |T-S: 4.043E-19+- 0.1%|
+          |K  : 3.466E-17+- 3.9% |K  : 4.345E-19+- 0.2%|
+          |D/K: 9.356E-01+- 4.0% |D/K: 9.999E-01+- 0.3%|
+   18.2500----------------------------------------------
+          |IRL131 IZ 130 IX   1  |IRL310 IZ 130 IX   2 |
+          |T  : 3.208E-17+- 1.1% |T  : 4.306E-19+- 0.1%|
+          |T-S: 2.995E-17+- 1.1% |T-S: 4.007E-19+- 0.1%|
+          |K  : 3.034E-17+- 4.0% |K  : 4.290E-19+- 0.2%|
+          |D/K: 1.057E+00+- 4.2% |D/K: 1.004E+00+- 0.3%|
+   18.5000----------------------------------------------
+          |IRL132 IZ 131 IX   1  |IRL311 IZ 131 IX   2 |
+          |T  : 3.137E-17+- 1.2% |T  : 4.270E-19+- 0.2%|
+          |T-S: 2.930E-17+- 1.1% |T-S: 3.974E-19+- 0.2%|
+          |K  : 3.235E-17+- 4.0% |K  : 4.256E-19+- 0.2%|
+          |D/K: 9.698E-01+- 4.2% |D/K: 1.003E+00+- 0.3%|
+   18.7500----------------------------------------------
+          |IRL133 IZ 132 IX   1  |IRL312 IZ 132 IX   2 |
+          |T  : 3.130E-17+- 1.2% |T  : 4.228E-19+- 0.1%|
+          |T-S: 2.922E-17+- 1.2% |T-S: 3.934E-19+- 0.1%|
+          |K  : 3.195E-17+- 4.0% |K  : 4.216E-19+- 0.2%|
+          |D/K: 9.799E-01+- 4.2% |D/K: 1.003E+00+- 0.3%|
+   19.0000----------------------------------------------
+          |IRL134 IZ 133 IX   1  |IRL313 IZ 133 IX   2 |
+          |T  : 3.044E-17+- 1.2% |T  : 4.181E-19+- 0.1%|
+          |T-S: 2.842E-17+- 1.2% |T-S: 3.891E-19+- 0.1%|
+          |K  : 2.911E-17+- 4.2% |K  : 4.164E-19+- 0.2%|
+          |D/K: 1.045E+00+- 4.3% |D/K: 1.004E+00+- 0.3%|
+   19.2500----------------------------------------------
+          |IRL135 IZ 134 IX   1  |IRL314 IZ 134 IX   2 |
+          |T  : 2.998E-17+- 1.2% |T  : 4.142E-19+- 0.1%|
+          |T-S: 2.799E-17+- 1.2% |T-S: 3.855E-19+- 0.1%|
+          |K  : 2.941E-17+- 4.1% |K  : 4.141E-19+- 0.2%|
+          |D/K: 1.019E+00+- 4.3% |D/K: 1.000E+00+- 0.3%|
+   19.5000----------------------------------------------
+          |IRL136 IZ 135 IX   1  |IRL315 IZ 135 IX   2 |
+          |T  : 2.924E-17+- 1.2% |T  : 4.103E-19+- 0.1%|
+          |T-S: 2.729E-17+- 1.2% |T-S: 3.818E-19+- 0.1%|
+          |K  : 2.916E-17+- 4.1% |K  : 4.084E-19+- 0.2%|
+          |D/K: 1.003E+00+- 4.3% |D/K: 1.005E+00+- 0.2%|
+   19.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   19.7500----------------------------------------------
+          |IRL137 IZ 136 IX   1  |IRL316 IZ 136 IX   2 |
+          |T  : 2.857E-17+- 1.2% |T  : 4.068E-19+- 0.2%|
+          |T-S: 2.667E-17+- 1.2% |T-S: 3.785E-19+- 0.2%|
+          |K  : 2.704E-17+- 4.3% |K  : 4.046E-19+- 0.2%|
+          |D/K: 1.057E+00+- 4.5% |D/K: 1.005E+00+- 0.3%|
+   20.0000----------------------------------------------
+          |IRL138 IZ 137 IX   1  |IRL317 IZ 137 IX   2 |
+          |T  : 2.822E-17+- 1.2% |T  : 4.020E-19+- 0.1%|
+          |T-S: 2.635E-17+- 1.2% |T-S: 3.741E-19+- 0.1%|
+          |K  : 2.769E-17+- 4.3% |K  : 4.006E-19+- 0.2%|
+          |D/K: 1.019E+00+- 4.5% |D/K: 1.004E+00+- 0.2%|
+   20.2500----------------------------------------------
+          |IRL139 IZ 138 IX   1  |IRL318 IZ 138 IX   2 |
+          |T  : 2.763E-17+- 1.2% |T  : 3.991E-19+- 0.1%|
+          |T-S: 2.581E-17+- 1.2% |T-S: 3.714E-19+- 0.1%|
+          |K  : 2.703E-17+- 4.3% |K  : 3.981E-19+- 0.2%|
+          |D/K: 1.022E+00+- 4.5% |D/K: 1.003E+00+- 0.3%|
+   20.5000----------------------------------------------
+          |IRL140 IZ 139 IX   1  |IRL319 IZ 139 IX   2 |
+          |T  : 2.749E-17+- 1.2% |T  : 3.946E-19+- 0.1%|
+          |T-S: 2.567E-17+- 1.2% |T-S: 3.672E-19+- 0.1%|
+          |K  : 2.823E-17+- 4.3% |K  : 3.944E-19+- 0.2%|
+          |D/K: 9.736E-01+- 4.5% |D/K: 1.001E+00+- 0.3%|
+   20.7500----------------------------------------------
+          |IRL141 IZ 140 IX   1  |IRL320 IZ 140 IX   2 |
+          |T  : 2.712E-17+- 1.2% |T  : 3.911E-19+- 0.1%|
+          |T-S: 2.532E-17+- 1.2% |T-S: 3.640E-19+- 0.1%|
+          |K  : 2.744E-17+- 4.3% |K  : 3.905E-19+- 0.3%|
+          |D/K: 9.884E-01+- 4.5% |D/K: 1.002E+00+- 0.3%|
+   21.0000----------------------------------------------
+          |IRL142 IZ 141 IX   1  |IRL321 IZ 141 IX   2 |
+          |T  : 2.672E-17+- 1.2% |T  : 3.874E-19+- 0.1%|
+          |T-S: 2.495E-17+- 1.2% |T-S: 3.606E-19+- 0.1%|
+          |K  : 2.575E-17+- 4.5% |K  : 3.867E-19+- 0.2%|
+          |D/K: 1.038E+00+- 4.7% |D/K: 1.002E+00+- 0.3%|
+   21.2500----------------------------------------------
+          |IRL143 IZ 142 IX   1  |IRL322 IZ 142 IX   2 |
+          |T  : 2.639E-17+- 1.2% |T  : 3.837E-19+- 0.1%|
+          |T-S: 2.464E-17+- 1.2% |T-S: 3.571E-19+- 0.1%|
+          |K  : 2.620E-17+- 4.4% |K  : 3.831E-19+- 0.2%|
+          |D/K: 1.007E+00+- 4.6% |D/K: 1.001E+00+- 0.3%|
+   21.5000----------------------------------------------
+          |IRL144 IZ 143 IX   1  |IRL323 IZ 143 IX   2 |
+          |T  : 2.606E-17+- 1.3% |T  : 3.809E-19+- 0.1%|
+          |T-S: 2.433E-17+- 1.3% |T-S: 3.545E-19+- 0.1%|
+          |K  : 2.658E-17+- 4.4% |K  : 3.804E-19+- 0.2%|
+          |D/K: 9.805E-01+- 4.5% |D/K: 1.001E+00+- 0.3%|
+   21.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   21.7500----------------------------------------------
+          |IRL145 IZ 144 IX   1  |IRL324 IZ 144 IX   2 |
+          |T  : 2.547E-17+- 1.3% |T  : 3.779E-19+- 0.2%|
+          |T-S: 2.379E-17+- 1.3% |T-S: 3.517E-19+- 0.2%|
+          |K  : 2.690E-17+- 4.4% |K  : 3.757E-19+- 0.2%|
+          |D/K: 9.466E-01+- 4.6% |D/K: 1.006E+00+- 0.3%|
+   22.0000----------------------------------------------
+          |IRL146 IZ 145 IX   1  |IRL325 IZ 145 IX   2 |
+          |T  : 2.564E-17+- 1.3% |T  : 3.732E-19+- 0.1%|
+          |T-S: 2.393E-17+- 1.3% |T-S: 3.473E-19+- 0.1%|
+          |K  : 2.516E-17+- 4.6% |K  : 3.718E-19+- 0.2%|
+          |D/K: 1.019E+00+- 4.7% |D/K: 1.004E+00+- 0.2%|
+   22.2500----------------------------------------------
+          |IRL147 IZ 146 IX   1  |IRL326 IZ 146 IX   2 |
+          |T  : 2.510E-17+- 1.3% |T  : 3.696E-19+- 0.1%|
+          |T-S: 2.343E-17+- 1.3% |T-S: 3.439E-19+- 0.1%|
+          |K  : 2.484E-17+- 4.5% |K  : 3.686E-19+- 0.2%|
+          |D/K: 1.010E+00+- 4.7% |D/K: 1.003E+00+- 0.3%|
+   22.5000----------------------------------------------
+          |IRL148 IZ 147 IX   1  |IRL327 IZ 147 IX   2 |
+          |T  : 2.513E-17+- 1.3% |T  : 3.663E-19+- 0.1%|
+          |T-S: 2.346E-17+- 1.3% |T-S: 3.409E-19+- 0.1%|
+          |K  : 2.362E-17+- 4.5% |K  : 3.667E-19+- 0.3%|
+          |D/K: 1.064E+00+- 4.7% |D/K: 9.990E-01+- 0.3%|
+   22.7500----------------------------------------------
+          |IRL149 IZ 148 IX   1  |IRL328 IZ 148 IX   2 |
+          |T  : 2.473E-17+- 1.3% |T  : 3.630E-19+- 0.2%|
+          |T-S: 2.309E-17+- 1.3% |T-S: 3.379E-19+- 0.2%|
+          |K  : 2.435E-17+- 4.6% |K  : 3.626E-19+- 0.3%|
+          |D/K: 1.016E+00+- 4.7% |D/K: 1.001E+00+- 0.3%|
+   23.0000----------------------------------------------
+          |IRL150 IZ 149 IX   1  |IRL329 IZ 149 IX   2 |
+          |T  : 2.367E-17+- 1.3% |T  : 3.586E-19+- 0.1%|
+          |T-S: 2.210E-17+- 1.3% |T-S: 3.337E-19+- 0.1%|
+          |K  : 2.225E-17+- 4.7% |K  : 3.583E-19+- 0.2%|
+          |D/K: 1.064E+00+- 4.9% |D/K: 1.001E+00+- 0.3%|
+   23.2500----------------------------------------------
+          |IRL151 IZ 150 IX   1  |IRL330 IZ 150 IX   2 |
+          |T  : 2.327E-17+- 1.3% |T  : 3.558E-19+- 0.2%|
+          |T-S: 2.172E-17+- 1.3% |T-S: 3.311E-19+- 0.2%|
+          |K  : 2.181E-17+- 4.9% |K  : 3.561E-19+- 0.3%|
+          |D/K: 1.067E+00+- 5.1% |D/K: 9.992E-01+- 0.3%|
+   23.5000----------------------------------------------
+          |IRL152 IZ 151 IX   1  |IRL331 IZ 151 IX   2 |
+          |T  : 2.347E-17+- 1.3% |T  : 3.525E-19+- 0.2%|
+          |T-S: 2.192E-17+- 1.3% |T-S: 3.281E-19+- 0.2%|
+          |K  : 2.292E-17+- 4.7% |K  : 3.509E-19+- 0.2%|
+          |D/K: 1.024E+00+- 4.9% |D/K: 1.005E+00+- 0.3%|
+   23.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   23.7500----------------------------------------------
+          |IRL153 IZ 152 IX   1  |IRL332 IZ 152 IX   2 |
+          |T  : 2.286E-17+- 1.3% |T  : 3.496E-19+- 0.2%|
+          |T-S: 2.134E-17+- 1.3% |T-S: 3.254E-19+- 0.2%|
+          |K  : 2.136E-17+- 4.8% |K  : 3.481E-19+- 0.2%|
+          |D/K: 1.070E+00+- 5.0% |D/K: 1.004E+00+- 0.3%|
+   24.0000----------------------------------------------
+          |IRL154 IZ 153 IX   1  |IRL333 IZ 153 IX   2 |
+          |T  : 2.294E-17+- 1.3% |T  : 3.461E-19+- 0.2%|
+          |T-S: 2.142E-17+- 1.3% |T-S: 3.222E-19+- 0.2%|
+          |K  : 2.172E-17+- 4.7% |K  : 3.444E-19+- 0.2%|
+          |D/K: 1.056E+00+- 4.9% |D/K: 1.005E+00+- 0.3%|
+   24.2500----------------------------------------------
+          |IRL155 IZ 154 IX   1  |IRL334 IZ 154 IX   2 |
+          |T  : 2.160E-17+- 1.4% |T  : 3.423E-19+- 0.2%|
+          |T-S: 2.017E-17+- 1.4% |T-S: 3.186E-19+- 0.2%|
+          |K  : 2.103E-17+- 5.0% |K  : 3.407E-19+- 0.2%|
+          |D/K: 1.027E+00+- 5.2% |D/K: 1.005E+00+- 0.3%|
+   24.5000----------------------------------------------
+          |IRL156 IZ 155 IX   1  |IRL335 IZ 155 IX   2 |
+          |T  : 2.125E-17+- 1.4% |T  : 3.388E-19+- 0.1%|
+          |T-S: 1.984E-17+- 1.4% |T-S: 3.154E-19+- 0.1%|
+          |K  : 2.114E-17+- 5.0% |K  : 3.379E-19+- 0.2%|
+          |D/K: 1.005E+00+- 5.2% |D/K: 1.003E+00+- 0.3%|
+   24.7500----------------------------------------------
+          |IRL157 IZ 156 IX   1  |IRL336 IZ 156 IX   2 |
+          |T  : 2.176E-17+- 1.4% |T  : 3.359E-19+- 0.1%|
+          |T-S: 2.032E-17+- 1.4% |T-S: 3.127E-19+- 0.1%|
+          |K  : 2.125E-17+- 4.9% |K  : 3.346E-19+- 0.2%|
+          |D/K: 1.024E+00+- 5.1% |D/K: 1.004E+00+- 0.3%|
+   25.0000----------------------------------------------
+          |IRL158 IZ 157 IX   1  |IRL337 IZ 157 IX   2 |
+          |T  : 2.150E-17+- 1.4% |T  : 3.322E-19+- 0.1%|
+          |T-S: 2.007E-17+- 1.4% |T-S: 3.092E-19+- 0.1%|
+          |K  : 2.013E-17+- 5.0% |K  : 3.318E-19+- 0.3%|
+          |D/K: 1.068E+00+- 5.1% |D/K: 1.001E+00+- 0.3%|
+   25.2500----------------------------------------------
+          |IRL159 IZ 158 IX   1  |IRL338 IZ 158 IX   2 |
+          |T  : 2.076E-17+- 1.4% |T  : 3.288E-19+- 0.1%|
+          |T-S: 1.939E-17+- 1.4% |T-S: 3.061E-19+- 0.1%|
+          |K  : 2.047E-17+- 4.9% |K  : 3.278E-19+- 0.2%|
+          |D/K: 1.014E+00+- 5.1% |D/K: 1.003E+00+- 0.2%|
+   25.5000----------------------------------------------
+          |IRL160 IZ 159 IX   1  |IRL339 IZ 159 IX   2 |
+          |T  : 2.055E-17+- 1.4% |T  : 3.263E-19+- 0.2%|
+          |T-S: 1.918E-17+- 1.4% |T-S: 3.038E-19+- 0.2%|
+          |K  : 2.065E-17+- 5.0% |K  : 3.247E-19+- 0.2%|
+          |D/K: 9.950E-01+- 5.2% |D/K: 1.005E+00+- 0.3%|
+   25.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   25.7500----------------------------------------------
+          |IRL161 IZ 160 IX   1  |IRL340 IZ 160 IX   2 |
+          |T  : 2.017E-17+- 1.4% |T  : 3.228E-19+- 0.1%|
+          |T-S: 1.884E-17+- 1.4% |T-S: 3.005E-19+- 0.1%|
+          |K  : 2.198E-17+- 4.8% |K  : 3.220E-19+- 0.2%|
+          |D/K: 9.177E-01+- 5.0% |D/K: 1.003E+00+- 0.3%|
+   26.0000----------------------------------------------
+          |IRL162 IZ 161 IX   1  |IRL341 IZ 161 IX   2 |
+          |T  : 1.976E-17+- 1.4% |T  : 3.198E-19+- 0.1%|
+          |T-S: 1.845E-17+- 1.4% |T-S: 2.977E-19+- 0.1%|
+          |K  : 2.060E-17+- 5.1% |K  : 3.201E-19+- 0.3%|
+          |D/K: 9.589E-01+- 5.3% |D/K: 9.989E-01+- 0.3%|
+   26.2500----------------------------------------------
+          |IRL163 IZ 162 IX   1  |IRL342 IZ 162 IX   2 |
+          |T  : 1.950E-17+- 1.4% |T  : 3.176E-19+- 0.2%|
+          |T-S: 1.821E-17+- 1.4% |T-S: 2.957E-19+- 0.2%|
+          |K  : 1.887E-17+- 5.2% |K  : 3.173E-19+- 0.3%|
+          |D/K: 1.034E+00+- 5.4% |D/K: 1.001E+00+- 0.3%|
+   26.5000----------------------------------------------
+          |IRL164 IZ 163 IX   1  |IRL343 IZ 163 IX   2 |
+          |T  : 1.923E-17+- 1.5% |T  : 3.140E-19+- 0.2%|
+          |T-S: 1.796E-17+- 1.4% |T-S: 2.923E-19+- 0.2%|
+          |K  : 1.841E-17+- 5.3% |K  : 3.120E-19+- 0.2%|
+          |D/K: 1.045E+00+- 5.5% |D/K: 1.006E+00+- 0.2%|
+   26.7500----------------------------------------------
+          |IRL165 IZ 164 IX   1  |IRL344 IZ 164 IX   2 |
+          |T  : 1.983E-17+- 1.4% |T  : 3.108E-19+- 0.2%|
+          |T-S: 1.852E-17+- 1.4% |T-S: 2.894E-19+- 0.2%|
+          |K  : 1.925E-17+- 5.2% |K  : 3.090E-19+- 0.2%|
+          |D/K: 1.030E+00+- 5.4% |D/K: 1.006E+00+- 0.3%|
+   27.0000----------------------------------------------
+          |IRL166 IZ 165 IX   1  |IRL345 IZ 165 IX   2 |
+          |T  : 1.882E-17+- 1.5% |T  : 3.067E-19+- 0.1%|
+          |T-S: 1.758E-17+- 1.5% |T-S: 2.855E-19+- 0.1%|
+          |K  : 1.906E-17+- 5.1% |K  : 3.054E-19+- 0.2%|
+          |D/K: 9.879E-01+- 5.3% |D/K: 1.004E+00+- 0.2%|
+   27.2500----------------------------------------------
+          |IRL167 IZ 166 IX   1  |IRL346 IZ 166 IX   2 |
+          |T  : 1.806E-17+- 1.5% |T  : 3.036E-19+- 0.1%|
+          |T-S: 1.686E-17+- 1.5% |T-S: 2.826E-19+- 0.1%|
+          |K  : 1.798E-17+- 5.4% |K  : 3.036E-19+- 0.2%|
+          |D/K: 1.004E+00+- 5.6% |D/K: 1.000E+00+- 0.3%|
+   27.5000----------------------------------------------
+          |IRL168 IZ 167 IX   1  |IRL347 IZ 167 IX   2 |
+          |T  : 1.813E-17+- 1.5% |T  : 3.010E-19+- 0.1%|
+          |T-S: 1.694E-17+- 1.5% |T-S: 2.802E-19+- 0.1%|
+          |K  : 1.608E-17+- 5.4% |K  : 3.000E-19+- 0.2%|
+          |D/K: 1.128E+00+- 5.6% |D/K: 1.003E+00+- 0.3%|
+   27.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   27.7500----------------------------------------------
+          |IRL169 IZ 168 IX   1  |IRL348 IZ 168 IX   2 |
+          |T  : 1.766E-17+- 1.5% |T  : 2.980E-19+- 0.1%|
+          |T-S: 1.649E-17+- 1.5% |T-S: 2.774E-19+- 0.1%|
+          |K  : 1.860E-17+- 5.4% |K  : 2.974E-19+- 0.2%|
+          |D/K: 9.493E-01+- 5.6% |D/K: 1.002E+00+- 0.3%|
+   28.0000----------------------------------------------
+          |IRL170 IZ 169 IX   1  |IRL349 IZ 169 IX   2 |
+          |T  : 1.780E-17+- 1.5% |T  : 2.950E-19+- 0.1%|
+          |T-S: 1.662E-17+- 1.5% |T-S: 2.746E-19+- 0.1%|
+          |K  : 1.810E-17+- 5.4% |K  : 2.942E-19+- 0.2%|
+          |D/K: 9.833E-01+- 5.6% |D/K: 1.002E+00+- 0.2%|
+   28.2500----------------------------------------------
+          |IRL171 IZ 170 IX   1  |IRL350 IZ 170 IX   2 |
+          |T  : 1.714E-17+- 1.5% |T  : 2.922E-19+- 0.1%|
+          |T-S: 1.601E-17+- 1.5% |T-S: 2.721E-19+- 0.1%|
+          |K  : 1.607E-17+- 5.6% |K  : 2.909E-19+- 0.2%|
+          |D/K: 1.066E+00+- 5.8% |D/K: 1.005E+00+- 0.2%|
+   28.5000----------------------------------------------
+          |IRL172 IZ 171 IX   1  |IRL351 IZ 171 IX   2 |
+          |T  : 1.693E-17+- 1.5% |T  : 2.893E-19+- 0.1%|
+          |T-S: 1.581E-17+- 1.5% |T-S: 2.694E-19+- 0.1%|
+          |K  : 1.652E-17+- 5.6% |K  : 2.895E-19+- 0.3%|
+          |D/K: 1.024E+00+- 5.8% |D/K: 9.994E-01+- 0.3%|
+   28.7500----------------------------------------------
+          |IRL173 IZ 172 IX   1  |IRL352 IZ 172 IX   2 |
+          |T  : 1.690E-17+- 1.6% |T  : 2.860E-19+- 0.1%|
+          |T-S: 1.579E-17+- 1.6% |T-S: 2.663E-19+- 0.1%|
+          |K  : 1.679E-17+- 5.5% |K  : 2.862E-19+- 0.3%|
+          |D/K: 1.007E+00+- 5.7% |D/K: 9.990E-01+- 0.3%|
+   29.0000----------------------------------------------
+          |IRL174 IZ 173 IX   1  |IRL353 IZ 173 IX   2 |
+          |T  : 1.651E-17+- 1.5% |T  : 2.841E-19+- 0.1%|
+          |T-S: 1.541E-17+- 1.5% |T-S: 2.645E-19+- 0.1%|
+          |K  : 1.698E-17+- 5.6% |K  : 2.840E-19+- 0.3%|
+          |D/K: 9.721E-01+- 5.8% |D/K: 1.000E+00+- 0.3%|
+   29.2500----------------------------------------------
+          |IRL175 IZ 174 IX   1  |IRL354 IZ 174 IX   2 |
+          |T  : 1.666E-17+- 1.6% |T  : 2.818E-19+- 0.2%|
+          |T-S: 1.555E-17+- 1.6% |T-S: 2.624E-19+- 0.2%|
+          |K  : 1.696E-17+- 5.6% |K  : 2.807E-19+- 0.3%|
+          |D/K: 9.822E-01+- 5.8% |D/K: 1.004E+00+- 0.3%|
+   29.5000----------------------------------------------
+          |IRL176 IZ 175 IX   1  |IRL355 IZ 175 IX   2 |
+          |T  : 1.638E-17+- 1.6% |T  : 2.786E-19+- 0.1%|
+          |T-S: 1.530E-17+- 1.6% |T-S: 2.594E-19+- 0.1%|
+          |K  : 1.679E-17+- 5.7% |K  : 2.767E-19+- 0.2%|
+          |D/K: 9.756E-01+- 5.9% |D/K: 1.007E+00+- 0.2%|
+   29.7500----------------------------------------------
+ \f
+                                                      Wed Jul  3 14:12:49 2019
+
+
+ Dose_2cm_by_2cm_BONE_Compat_6cm_ICRU_along_central axis                        
+
+                   ZONAL OUTPUT GRID: NON-ROTATED
+                   ******************************
+  
+
+         0.0000                 0.0250                15.0000
+   29.7500----------------------------------------------
+          |IRL177 IZ 176 IX   1  |IRL356 IZ 176 IX   2 |
+          |T  : 1.587E-17+- 1.6% |T  : 2.752E-19+- 0.1%|
+          |T-S: 1.482E-17+- 1.6% |T-S: 2.563E-19+- 0.1%|
+          |K  : 1.552E-17+- 5.8% |K  : 2.737E-19+- 0.2%|
+          |D/K: 1.023E+00+- 6.0% |D/K: 1.005E+00+- 0.2%|
+   30.0000----------------------------------------------
+          |IRL178 IZ 177 IX   1  |IRL357 IZ 177 IX   2 |
+          |T  : 1.553E-17+- 1.2% |T  : 2.712E-19+- 0.1%|
+          |T-S: 1.450E-17+- 1.2% |T-S: 2.525E-19+- 0.1%|
+          |K  : 1.600E-17+- 4.0% |K  : 2.709E-19+- 0.2%|
+          |D/K: 9.701E-01+- 4.2% |D/K: 1.001E+00+- 0.2%|
+   30.5000----------------------------------------------
+          |IRL179 IZ 178 IX   1  |IRL358 IZ 178 IX   2 |
+          |T  : 1.534E-17+- 1.2% |T  : 2.659E-19+- 0.1%|
+          |T-S: 1.432E-17+- 1.2% |T-S: 2.476E-19+- 0.1%|
+          |K  : 1.527E-17+- 4.2% |K  : 2.647E-19+- 0.1%|
+          |D/K: 1.004E+00+- 4.4% |D/K: 1.004E+00+- 0.2%|
+   31.0000----------------------------------------------
+          |IRL180 IZ 179 IX   1  |IRL359 IZ 179 IX   2 |
+          |T  : 1.180E-17+- 0.4% |T  : 2.198E-19+- 0.0%|
+          |T-S: 1.102E-17+- 0.4% |T-S: 2.048E-19+- 0.0%|
+          |K  : 1.169E-17+- 1.4% |K  : 2.195E-19+- 0.1%|
+          |D/K: 1.010E+00+- 1.5% |D/K: 1.002E+00+- 0.1%|
+   40.0000----------------------------------------------
+\f
+
+ 
+Wed Jul  3 14:12:49 2019
