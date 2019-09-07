@@ -1,0 +1,112 @@
+<html>
+    <head>
+         <title></title>
+<script type="text/javascript">
+           
+            var image1="",image2="",image3="",image4="",image5="",image6="",image7="";
+               
+            function defualtImages(){
+                image1= 'Reader_MasterB_B.jpg';
+                image2= 'Reader_SettingB_B.jpg';
+                image3= 'Output_StatusB_B.jpg';
+                image4= 'Key_SettingB_B.jpg';
+                image5= 'Emp_DataSyncB_B.jpg';
+                image6= 'Reader_AccessB_B.jpg';
+                image7= 'Swipe_ServerB_B.jpg';
+                
+            }
+           
+            function changeImage(index){
+              
+                if(index==1){
+                    defualtImages();
+                    image1='Reader_MasterO_B.jpg';                    
+                }
+                if(index==2){
+                    defualtImages();
+                    image2='Reader_SettingO_B.jpg';                    
+                    
+                }
+                if(index==3){
+                    defualtImages();
+                    image3='Output_StatusO_B.jpg';                    
+                }
+                if(index==4){
+                    defualtImages();
+                    image4='Key_SettingO_B.jpg'; 
+                }                   
+                if(index==5){
+                    defualtImages();
+                    image5='Emp_DataSyncO_B.jpg';                    
+                }
+                if(index==6){
+                    defualtImages();
+                    image6='Reader_AccessO_B.jpg';                    
+                }
+                if(index==7){
+                    defualtImages();
+                    image7='Swipe_ServerO_B.jpg';                    
+                }
+                
+                document.getElementById('toChange1').src='readerImages/'+image1;  
+                document.getElementById('toChange2').src='readerImages/'+image2;
+                document.getElementById('toChange3').src='readerImages/'+image3;
+                document.getElementById('toChange4').src='readerImages/'+image4;
+                document.getElementById('toChange5').src='readerImages/'+image5;
+                document.getElementById('toChange6').src='readerImages/'+image6;
+                document.getElementById('toChange7').src='readerImages/'+image7;               
+                
+            }   
+        </script>
+</head>
+    <body>
+    <base target="mainframe">
+    <body  text="green" background="../home/homeImages/LeftMain.jpg">
+        <br>
+        <p align="center"><b>
+                <big>Reader</big>
+            </b></p>
+        <br>
+        <table border="0" width="100%" cellspacing="1" cellpadding="0">
+            <!-- monthlyMuster  -->
+           
+            <tr>
+                <td align="center">
+                    <a href="ReaderMaster.jsp"><div ><img src="readerImages/Reader_MasterB_B.jpg" id="toChange1" onclick="changeImage(1)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href='ReaderSettings.jsp'><div ><img src="readerImages/Reader_SettingB_B.jpg" id="toChange2" onclick="changeImage(2)" /></div></a>
+                </td>
+            </tr> 
+                       
+            <tr>
+                <td align="center">
+                  <a href='OutputStatus.jsp'><div ><img src="readerImages/Output_StatusB_B.jpg" id="toChange3" onclick="changeImage(3)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="KeySetting.jsp"><div ><img src="readerImages/Key_SettingB_B.jpg" id="toChange4" onclick="changeImage(4)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="EmpDataSync.jsp"><div ><img src="readerImages/Emp_DataSyncB_B.jpg" id="toChange5" onclick="changeImage(5)" /></div></a>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">
+                    <a href="ReaderAccess.jsp"><div ><img src="readerImages/Reader_AccessB_B.jpg" id="toChange6" onclick="changeImage(6)" /></div></a>
+                </td6
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="SwipeServer.jsp"><div ><img src="readerImages/Swipe_ServerB_B.jpg" id="toChange7" onclick="changeImage(7)" /></div></a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

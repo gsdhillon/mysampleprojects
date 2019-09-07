@@ -1,0 +1,39 @@
+<html>
+    <head>
+         <title></title>
+<script type="text/javascript">
+           
+            var image1="";
+               
+            function defualtImages(){
+                image1= 'Shift_RosterB_B.jpg';
+            }
+           
+            function changeImage(index){
+              
+                if(index==1){
+                    defualtImages();
+                    image1='Shift_RosterO_B.jpg';                    
+                } 
+                document.getElementById('toChange1').src='servicesImages/'+image1;  
+            }
+        </script>
+
+    <base target="mainframe">
+    <body  text="green" background="../home/homeImages/LeftMain.jpg">
+        <br>
+        <p align="center"><b>
+                <big>Services</big>
+            </b></p>
+        <br>
+        <table border="0" width="100%" cellspacing="1" cellpadding="0">
+            <!-- monthlyMuster  -->
+            
+            <tr>
+                <td align="center">                    
+                    <a href ="ShiftRoster.jsp"><div ><img src="servicesImages/Shift_RosterB_B.jpg" id="toChange1" onclick="changeImage(1)" /></div></a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

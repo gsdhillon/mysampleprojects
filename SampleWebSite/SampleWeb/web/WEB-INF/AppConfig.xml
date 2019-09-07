@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<root>
+    <sql-query>
+        <sql-query-name>DIV_EMP_LIST</sql-query-name>
+        <sql-query-file>sql/DIV_EMP_LIST.sql</sql-query-file>
+    </sql-query>
+</root>

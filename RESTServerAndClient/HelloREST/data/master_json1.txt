@@ -1,0 +1,11 @@
+{
+	"detailList":{
+		"detailList":[
+			{"detailPK":{"mid":1,"sno":1},"name":"A1"},
+			{"detailPK":{"mid":1,"sno":2},"name":"A2"},
+			{"detailPK":{"mid":1,"sno":3},"name":"A3"}
+		]
+	},
+	"id":1,
+	"name":"A"
+}

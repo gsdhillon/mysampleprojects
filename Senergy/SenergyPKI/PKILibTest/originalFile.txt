@@ -1,0 +1,63 @@
+Interface of the RSATool Class   
+
+   /** 
+     * 
+     * @param id
+     * @param empno
+     * @param signDate
+     * @return SignResult
+     * statusCode 0 - Success
+     * statusCode 1 - Certificate not found from Token
+     * statusCode 2 - Certificate Expired on signdate
+     * statusCode 3 - Token dos'nt belongs to empno
+     * statusCode 4 - some other exception occurred
+     * @throws java.lang.Exception
+     */
+    public static SignResult sign(InputStream is, String empno, Date signDate);
+
+   /** 
+     * 
+     * @param data
+     * @param empno
+     * @param signDate
+     * @return SignResult
+     * statusCode 0 - Success
+     * statusCode 1 - Certificate not found from Token
+     * statusCode 2 - Certificate Expired on signdate
+     * statusCode 3 - Token dos'nt belongs to empno
+     * statusCode 4 - some other exception occurred
+     * @throws java.lang.Exception
+     */
+    public static SignResult sign(byte[] data, String empno, Date signDate);
+
+    /**
+     * 
+     * @param is
+     * @param sign
+     * @param certSNO
+     * @param signDate
+     * @return SignVerifyResult
+     * statusCode 0 - SignVerify true
+     * statusCode 1 - SignVerify false
+     * statusCode 2 - Certificate not found from the PKIServer
+     * statusCode 3 - Certificate was expired on signdate
+     * statusCode 4 - some other exception occurred
+     */
+    public static VerifyResult verify(InputStream is, String sign, String certSNO, Date signDate);
+
+    /**
+     * 
+     * @param data
+     * @param sign
+     * @param certSNO
+     * @param signDate
+     * @return SignVerifyResult
+     * statusCode 0 - SignVerify true
+     * statusCode 1 - SignVerify false
+     * statusCode 2 - Certificate not found from the PKIServer
+     * statusCode 3 - Certificate was expired on signdate
+     * statusCode 4 - some other exception occurred
+     */
+    public static VerifyResult verify(byte[] data, String sign, String certSNO, Date signDate);
+
+end;

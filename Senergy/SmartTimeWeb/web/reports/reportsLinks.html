@@ -1,0 +1,144 @@
+<html>
+    <head>
+         <title></title>
+<script type="text/javascript">
+           
+            var image1="",image2="",image3="",image4="",image5="",image6="",image7="",image8="",image9="",image10="";
+               
+            function defualtImages(){
+                image1= 'Employee_ListB_B.jpg';
+                image2= 'MusterB_B.jpg';
+                image3= 'AbsentB_B.jpg';
+                image4= 'OutDoorDutyB_B.jpg';
+                image5= 'OverTimeB_B.jpg';
+                image6= 'OnLeaveB_B.jpg';
+                image7= 'EarlyB_B.jpg';
+                image8= 'LateB_B.jpg';
+                image9= 'AttendanceB_B.jpg';
+                image10= 'SingleSwipeB_B.jpg';                
+            }
+           
+            function changeImage(index){
+              
+                if(index==1){
+                    defualtImages();
+                    image1='Employee_ListO_B.jpg';                    
+                }
+                if(index==2){
+                    defualtImages();
+                    image2='MusterO_B.jpg';                    
+                    
+                }
+                if(index==3){
+                    defualtImages();
+                    image3='AbsentO_B.jpg';                    
+                }
+                if(index==4){
+                    defualtImages();
+                    image4='OutDoorDutyO_B.jpg'; 
+                }                   
+                if(index==5){
+                    defualtImages();
+                    image5='OverTimeO_B.jpg';                    
+                }
+                if(index==6){
+                    defualtImages();
+                    image6='OnLeaveO_B.jpg';                    
+                }
+                if(index==7){
+                    defualtImages();
+                    image7='EarlyO_B.jpg';                    
+                }
+                if(index==8){
+                    defualtImages();
+                    image8='LateO_B.jpg';                    
+                }
+                if(index==9){
+                    defualtImages();
+                    image9='AttendanceO_B.jpg';                    
+                }
+                if(index==10){
+                    defualtImages();
+                    image10='SingleSwipeO_B.jpg';                    
+                }
+                
+                document.getElementById('toChange1').src='reportImages/'+image1;  
+                document.getElementById('toChange2').src='reportImages/'+image2;
+                document.getElementById('toChange3').src='reportImages/'+image3;
+                document.getElementById('toChange4').src='reportImages/'+image4;
+                document.getElementById('toChange5').src='reportImages/'+image5;
+                document.getElementById('toChange6').src='reportImages/'+image6;
+                document.getElementById('toChange7').src='reportImages/'+image7; 
+                document.getElementById('toChange8').src='reportImages/'+image8;
+                document.getElementById('toChange9').src='reportImages/'+image9;
+                document.getElementById('toChange10').src='reportImages/'+image10; 
+                
+            }   
+        </script>
+</head>
+    <body>
+    <base target="mainframe">
+    <body  text="green" background="../home/homeImages/LeftMain.jpg">
+        <br>
+        <p align="center"><b>
+                <big>Reports</big>
+            </b></p>
+        <br>
+        <table border="0" width="100%" cellspacing="1" cellpadding="0">
+            <!-- userMaster  -->
+            <tr>
+                <td align="center">                   
+                    <a href="userMaster.jsp"><div ><img src="reportImages/Employee_ListB_B.jpg" id="toChange1" onclick="changeImage(1)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="musterReport.jsp"><div ><img src="reportImages/MusterB_B.jpg" id="toChange2" onclick="changeImage(2)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="AbsentReport.jsp"><div ><img src="reportImages/AbsentB_B.jpg" id="toChange3" onclick="changeImage(3)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="OutDoorDuty.jsp"><div ><img src="reportImages/OutDoorDutyB_B.jpg" id="toChange4" onclick="changeImage(4)" /></div></a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td align="center">
+                   <a href="OverTime.jsp"><div ><img src="reportImages/OverTimeB_B.jpg" id="toChange5" onclick="changeImage(5)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="OnLeaveReport.jsp"><div ><img src="reportImages/OnLeaveB_B.jpg" id="toChange6" onclick="changeImage(6)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="EarlyReport.jsp"><div ><img src="reportImages/EarlyB_B.jpg" id="toChange7" onclick="changeImage(7)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="LateReport.jsp"><div ><img src="reportImages/LateB_B.jpg" id="toChange8" onclick="changeImage(8)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="Attendance.jsp"><div ><img src="reportImages/AttendanceB_B.jpg" id="toChange9" onclick="changeImage(9)" /></div></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="SingleSwipe.jsp"><div ><img src="reportImages/SingleSwipeB_B.jpg" id="toChange10" onclick="changeImage(10)" /></div></a>
+                </td>
+            </tr> 
+
+           
+        </table>
+    </body>
+</html>

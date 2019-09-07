@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript">
+           
+            var image1="",image2="",image3="",image4="",image5="",image6="",image7="";
+               
+            function defualtImages(){
+                image1= 'AttendanceB_B.jpg';
+                image2= 'Shift_DetailsB_B.jpg';
+                image3= 'Entry_DetailsB_B.jpg';
+                image4= 'Out_Door_AppB_B.jpg';
+                image5= 'Comp_Off_AppB_B.jpg';
+                image6= 'Exception_EntryB_B.jpg';
+                image7= 'Print_CEP_B_B.jpg';
+                
+                
+            }
+           
+            function changeImage(index){
+              
+                if(index==1){
+                    defualtImages();
+                    image1='AttendanceO_B.jpg';                    
+                }
+                if(index==2){
+                    defualtImages();
+                    image2='Shift_DetailsO_B.jpg';                    
+                    
+                }
+                if(index==3){
+                    defualtImages();
+                    image3='Entry_DetailsO_B.jpg';                    
+                }
+                if(index==4){
+                    defualtImages();
+                    image4='Out_Door_AppO_B.jpg'; 
+                }                   
+                if(index==5){
+                    defualtImages();
+                    image5='Comp_Off_AppO_B.jpg';                    
+                }
+                if(index==6){
+                    defualtImages();
+                    image6='Exception_EntryO_B.jpg';                    
+                }
+                if(index==7){
+                    defualtImages();
+                    image7='Print_CEP_O_B.jpg';                    
+                }
+               
+                
+                document.getElementById('toChange1').src='selfImages/'+image1;  
+                document.getElementById('toChange2').src='selfImages/'+image2;
+                document.getElementById('toChange3').src='selfImages/'+image3;
+                document.getElementById('toChange4').src='selfImages/'+image4;
+                document.getElementById('toChange5').src='selfImages/'+image5;
+                document.getElementById('toChange6').src='selfImages/'+image6;
+                document.getElementById('toChange7').src='selfImages/'+image7;               
+                
+            }   
+        </script>
+    </head>
+    <body>
+    <base target="mainframe">
+    <body  text="green" background="../home/homeImages/LeftMain.jpg">
+        <br>
+        <p align="center"><b>
+                <big>Self</big>
+            </b></p>
+        <br>
+        <table border="0" width="100%" cellspacing="1" cellpadding="0">
+            <!-- monthlyMuster  -->
+            <tr>
+            <td align="center">
+                <a href="SelfReport.jsp"><div ><img src="selfImages/AttendanceB_B.jpg" id="toChange1" onclick="changeImage(1)" /></div></a>
+            </td>
+        </tr>
+        <tr>
+        <td align="center">
+            <a href ="SelfReport.jsp"><div ><img src="selfImages/Shift_DetailsB_B.jpg" id="toChange2" onclick="changeImage(2)" /></div></a>
+        </td>
+    </tr>
+    <tr>
+    <td align="center">
+        <a href ="EmpEntrySelf.jsp"><div ><img src="selfImages/Entry_DetailsB_B.jpg" id="toChange3" onclick="changeImage(3)" /></div></a>
+    </td>
+</tr>
+<!--<tr>
+<td align="center">
+    <a href ="OutDoorApplication.jsp"><div ><img src="selfImages/Out_Door_AppB_B.jpg" id="toChange4" onclick="changeImage(4)" /></div></a>
+</td>
+</tr>
+<tr>
+<td align="center">
+    <a href ="CoffApplication.jsp"><div ><img src="selfImages/Comp_Off_AppB_B.jpg" id="toChange5" onclick="changeImage(5)" /></div></a>
+</td>
+</tr>
+<tr>
+<td align="center">
+    <a href ="ExceptionEntry.jsp"><div ><img src="selfImages/Exception_EntryB_B.jpg" id="toChange6" onclick="changeImage(6)" /></div></a>
+</td>
+</tr>
+<tr>
+<td align="center">
+    <a href ="PrintCEPApp.jsp"><div ><img src="selfImages/Print_CEP_B_B.jpg" id="toChange7" onclick="changeImage(7)" /></div></a>
+</td>
+</tr>-->
+
+</table>
+</body>
+</html>
+

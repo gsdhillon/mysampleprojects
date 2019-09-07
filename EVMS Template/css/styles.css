@@ -1,0 +1,42 @@
+body{
+    width: 100%; height:100%; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; padding: 0; background-color: #FFFFFF;
+}
+#header{
+    height: 109px; width: 100%; position: absolute; left: 0; top: 0; background-image: url(../images/head_bg.png);  border: 0px solid black;
+}
+#header_img{
+    position: absolute; width: 480px; height: 92; left:5px; top: 10px; background-image:url(../images/head_left.png); border: 0px solid black;
+}
+#login_info{
+    position: absolute; width: 316px; height: 92; right:10px; top: 10px; background-image: url(../images/head_right.png); border: 0px solid black;
+}
+#menubar{
+    height: 32px; width: 100%; position: absolute; left: 0; top: 109px; background-image: url(../images/button_bg.png); border: 0px solid black;
+}
+#sidebar{
+    position: absolute; left: 0; top: 141px; width: 180px; bottom:4px; background-image: url(../images/side.png);  border: 0px solid black;
+}
+#center_frame{
+    position: absolute; left: 180px; right:4px; top: 141px; bottom: 4px; background-color:rgb(230,230,230); border: 0px solid black;
+}
+#footer{
+   position: absolute; left: 0; bottom: 0px;  width:100%; height: 4px; background-image: url(../images/foot.png); border: 0px solid black;
+}
+#rightside{
+    position: absolute; right: 0; bottom: 4px; top: 141px; width: 4px; background-image: url(../images/rightside.png); border: 0px solid black;
+}
+#button_table{
+    width: 100%; padding: 0; border: 0px solid black; border-spacing: none; border-collapse: collapse; color: black; font-size: 12pt; font-family: "Trebuchet MS", sans-serif;
+}
+#menu_normal{
+    width: 14%; text-align: center;
+}
+#menu_selected{
+    background-image: url(../images/button_bg_selected.png); width: 16%; text-align: center;
+}
+#submenu_normal{
+    text-align: center;
+}
+#submenu_selected{
+    background-image: url(../images/side_selected.png); text-align: center;
+}
