@@ -13,7 +13,7 @@ import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import rest.MyRestClient;
+import myrestclient.MyRestClient;
 
 /**
  *
@@ -24,7 +24,8 @@ public class Test {
         try{
             //USER
             Form form = new Form();
-            form.param("role", "user");
+//            form.param("role", "user");
+            form.param("role", "admin");
             form.param("userId", "24196");
             form.param("password", "fw0r");
  
@@ -43,27 +44,27 @@ public class Test {
                 return;
             }
             System.out.println("token - "+token);
-            //MASTER
-            Master master1 = new Master("X");
-            List<Detail> details = new ArrayList<>();
-            details.add(new Detail(1, "X1"));
-            details.add(new Detail(2, "X2"));
-            details.add(new Detail(3, "X3"));
-            master1.setDetailList(details);
-            
-            //POST
-            Client client = ClientBuilder.newClient();
-            WebTarget target = client.target("http://localhost:8080/HelloREST/rest/master/");
-            Invocation.Builder builder = target.request(MediaType.TEXT_PLAIN);
-            Response response = builder.header(HttpHeaders.AUTHORIZATION, token).post(Entity.entity(master1, MediaType.APPLICATION_JSON));
-            String result = response.readEntity(String.class);
-            System.out.println("post result - "+ result);
-            if("OK".equals(result.split(":")[0])){
-                int id = Integer.parseInt(result.split(":")[1]);
-                master1.setId(id);
-            }else{
-                return;
-            }
+//            //MASTER
+//            Master master1 = new Master("X");
+//            List<Detail> details = new ArrayList<>();
+//            details.add(new Detail(1, "X1"));
+//            details.add(new Detail(2, "X2"));
+//            details.add(new Detail(3, "X3"));
+//            master1.setDetailList(details);
+//            
+//            //POST
+//            Client client = ClientBuilder.newClient();
+//            WebTarget target = client.target("http://localhost:8080/HelloREST/rest/master/");
+//            Invocation.Builder builder = target.request(MediaType.TEXT_PLAIN);
+//            Response response = builder.header(HttpHeaders.AUTHORIZATION, token).post(Entity.entity(master1, MediaType.APPLICATION_JSON));
+//            String result = response.readEntity(String.class);
+//            System.out.println("post result - "+ result);
+//            if("OK".equals(result.split(":")[0])){
+//                int id = Integer.parseInt(result.split(":")[1]);
+//                master1.setId(id);
+//            }else{
+//                return;
+//            }
 //            
 //            System.in.read();
            
@@ -95,20 +96,20 @@ public class Test {
 //            }
            
             
-            //FIND_ALL
+//            FIND_ALL
 //            Client client = ClientBuilder.newClient();
 //            WebTarget target = client.target("http://localhost:8080/HelloREST/rest/master");
-//            builder = target.request(MediaType.APPLICATION_JSON);
-//            List<Master> masterList = builder.get(new GenericType<List<Master>>(){});
+//            Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
+//            List<Master> masterList = builder.header(HttpHeaders.AUTHORIZATION, token).get(new GenericType<List<Master>>(){});
 //            masterList.forEach((u) -> System.out.println(u));
 
 
             //FIND
-//            Client client = ClientBuilder.newClient();
-//            target = client.target("http://localhost:8080/HelloREST/rest/master/1");
-//            builder = target.request(MediaType.APPLICATION_JSON);
-//            Master master = builder.get(Master.class);
-//            System.out.println(master);
+            Client client = ClientBuilder.newClient();
+            WebTarget target = client.target("http://localhost:8080/HelloREST/rest/master/1");
+            Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
+            Master master = builder.header(HttpHeaders.AUTHORIZATION, token).get(Master.class);
+            System.out.println(master);
 
 
         }catch(Exception e){

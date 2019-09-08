@@ -1,4 +1,4 @@
-package rest;
+package myrestclient;
 
 import entity.Master;
 import java.util.List;
